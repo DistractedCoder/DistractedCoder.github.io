@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Tracker</title>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(49, 49, 49);
+        color: white;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 50px;
+    }
+        .verySoon {
+            color: rgb(239, 18, 18);
+        }
+        .soon {
+            color: rgb(252, 185, 85);
+        }
+        .coming{
+            color: rgb(239, 232, 24);
+        }
+        .far{
+            color: rgb(135, 218, 12);
+        }
+        .past{
+            color: rgb(74, 178, 252);
+        }
+        hr {
+            margin-bottom: 20px;
+            border-style: dashed;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Welcome to my game tracker page</h2>
+    <p>Should this really be on my website?</p>
+    <p>No but who cares.</p>
+    <p style="margin-bottom: 35px;">
+        <span class="verySoon">0-7 days</span>&nbsp;&nbsp;&nbsp;
+        <span class="soon">8-21 days</span>&nbsp;&nbsp;&nbsp;
+        <span class="coming">22-37 days</span>&nbsp;&nbsp;&nbsp;
+        <span class="far">38+ days</span>
+    </p>
+
+  
+
+    <div class="trackerArea">
+
+    </div>
+
+
+
+    <script>
+        var games = [                                //year,month,day
+            ["Mario + Rabbids Sparks of Hope", new Date(2022,10-1,20)],
+            ["Bayonetta 3", new Date(2022,10-1,28)],
+            ["Sonic Frontiers", new Date(2022,11-1,7)],
+            ["God of War Ragnarök", new Date(2022,11-1,9)],
+            ["Pokémon Scarlet and Violet", new Date(2022,11-1,18)],
+            ["Dragon Quest Treasures", new Date(2022,12-1,9)],
+            ["Hogwarts Legacy", new Date(2023,2-1,10)],
+            ["Kirby's Return to Dream Land Deluxe", new Date(2023,2-1,24)],
+            ["Minecraft Legends*", new Date(2023,3-1,1)],
+            ["The Super Mario Bros. Movie", new Date(2023,4-1,7)],
+            ["Pikmin 4*", new Date(2023,7-1,1)],
+            ["Hollow Knight: Silksong*", new Date(2023,5-1,1)],
+            ["The Legend of Zelda: Tears of the Kingdom", new Date(2023,5-1,12)],
+            
+        ];
+
+        var today = new Date();
+        var output = "";
+
+        for (var i = 0; i < games.length; i++)
+        {
+            output = output + "<h3>> " + games[i][0] + " <</h3>";
+            var d = games[i][1].toDateString().split(' ');
+            output = output + "<p>";
+                output = output + d[0] + " " + d[1] + " " + d[2] + ", " + d[3] + " - ";
+            
+            var days = games[i][1].getTime() - today.getTime();
+            days = Math.round(days / (1000 * 3600 * 24));
+
+            var className = "far";
+            var m = ""
+            if (days < 0)
+            {
+                className = "past";
+            }
+            if (days >= 0 && days < 7)
+            {
+                className = "verySoon";
+            }
+            if (days >= 7 && days < 21)
+            {
+                className = "soon";
+            }
+            if (days >= 21 && days < 37)
+            {
+                className = "coming";
+            }
+            if (days > 30)
+            {
+                m = " (" + (days/30).toFixed(1) + " months)";
+            }
+            if (days > 60)
+            {
+                m = " (" + (days/30).toFixed(0) + " months)";
+            }
+
+            output = output + "<b class='" + className + "'>";
+                output = output + days.toString();
+
+                output = output + " days</b>" + m + "</p>";
+                output = output + "<hr>";
+        }
+
+        $( ".trackerArea" ).append(output);
+    </script>
+    
+</body>
+</html>
