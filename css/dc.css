@@ -1043,6 +1043,13 @@ position: relative;
     margin-top: -5px;
 }
 
+/*smaller than medium*/
+@media (max-width: 767.98px) {
+    .pencil-text {
+        width: 73%
+    }
+}
+
 /*==============================================================================================footer*/
 footer {
     border: var(--debug) solid blue;
