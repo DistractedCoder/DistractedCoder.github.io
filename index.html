@@ -1,300 +1,263 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
- 
-<head>
 
-    <title>Distracted Coder</title>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Distracted Coder</title>
+    <meta name="Description" content="Distracted Coder is a small indie game development team">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/1f28aba095.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/js/dc.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aleo&family=Nunito&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Sue+Ellen+Francisco&family=Suez+One&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/chrome-reset.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/dc.css">
+
+    <script>
+        $(function () {
+            $("#header").load("/jquery/header.html");
+            $("#footer").load("/jquery/footer.html");
+        });
+    </script>
+
 </head>
 
-<body>
-    <style>
-        body {
-            background-color: #80aeda;
-            font-family: 'Nunito', Helvetica, Arial, Sans-Serif;
-            color: rgb(20, 20, 20);
-        }
+<body class="page-grid">
 
-        h1,h2,h3,h4,h5,.h1,.h2,.h3.h4,.h5
-        {
-            font-family: 'Aleo', serif;
-        }
-
-        .col,
-        .col-4 {
-            bborder: 1px solid red;
-        }
-
-        .container {
-            bborder: 1px solid blue;
-        }
-
-        .speechBubble {
-            padding: 15px;
-            background-color: rgb(230 239 248);
-            border-radius: 15px;
-            bborder-bottom-left-radius: 0;
-            position: relative;
-            margin-bottom: 15px;
-        }
-
-        .speechBubble:before {
-            content: "";
-            width: 0px;
-            height: 0px;
-            border-top: 15px solid transparent;
-            border-bottom: 15px solid transparent;
-            border-right: 15px solid rgb(230 239 248);
-            position: absolute;
-            left: -13px;
-            bottom: 15px;
-        }
-
-        .DcAvatar {
-            position: sticky;
-            top: 0;
-            width: auto;
-            max-width: 100%;
-            height: auto;
-            max-height: 400px;
-        }
-
-        .youtube {
-            border-top: 4px dashed #e62017;
-            border-bottom: 4px dashed #e62017;
-            padding-top: 15px;
-            padding-bottom: 18px;
-            background-color: #0a03bd17;
-        }
-
-        .videoCallout {
-            border: none;
-            padding: 15px;
-            background-color: rgb(230 239 248);
-            border-radius: 15px;
-            position: relative;
-            margin-bottom: 15px;
-            padding-bottom: 5px;
-        }
-
-        @media (max-width: 575px) {
-            .videoCallout {
-                margin-left: 35px;
-                margin-right: 35px;
-            }
-        }
-
-        .videoCallout a {
-            text-decoration: none;
-            font-weight: bold;
-            color: black;
-        }
-
-        .videoCallout a:hover {
-            text-decoration: underline;
-            font-weight: bold;
-            color: rgba(0, 0, 0, 0.8);
-            cursor: pointer;
-        }
-
-        .thumbnail {
-            position: relative;
-        }
-
-        .thumbnailTime {
-            position: absolute;
-            color: white;
-            background-color: rgba(0, 0, 0, 0.856);
-            padding: 3px;
-            border-radius: 4px;
-            font-size: .7em;
-            bottom: 6px;
-            right: 6px;
-        }
-
-        .footer {
-            background-color: #136bbd;
-            color: white;
-            padding: 20px;
-            margin-top: 30px;
-        }
-    </style>
+    <header>
+        <div id="header"></div>
 
 
-    <div class="container pt-4">
-        <div class="row">
-            <div class="col-4 col-sm text-center">
-                <img src="/img/greeting-normal.png" class="DcAvatar">
+
+
+        <noscript style="width: 100%;">
+            <div style="font-size: 22px; color: red;">
+                This page requires javascript to run correctly. Parts may be missing or function incorrectly.
             </div>
-            <div class="col-8 col-sm text-center">
-                <div class="speechBubble">
-                    <p class="h5 fw-bold">Welcome the Distracted Coder Website</p>
-                    <p>Honestly, I think I purchased the domain too soon so I'll finish the website later. Whoops.</p>
-                </div>
+        </noscript>
+    </header>
 
-                <div class="speechBubble">
-                    <p class="h5 fw-bold">Why I do YouTube?</p>
-                    <p>Some day I just want to be able to say that 100,000 people liked what I did. That my stupid content was enjoyed.</p>
-                    <p>And I want the plaque to prove it.</p>
+
+    <section class="hero blueprint-grid">
+        <div class="hero-left">
+            <div class="hero-stripe"></div>
+        </div>
+        <div class="hero-grid">
+            <div class="hero-avatar"></div>
+
+            <div class="hero-content pb-md-10">
+                <h1 class="display-6">Welcome to</h1>
+                <h1 class="display-2 text-decoration-underline pb-md-10">Distracted Coder</h1>
+                <p class="lead pb-md-10">Slogan text will go here...</p>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="hero-stripe hero-stripe-right"></div>
+        </div>
+
+        <div class="post-it post-it-hero-pos" style="transform: rotate(8deg);">
+            <div class="post-it-inner font-handwritten font-pen">
+                Don't forget to update the slogan to say something about my coding projects and games!
+            </div>
+        </div>
+    </section>
+
+
+    <div class="page-notes1 font-handwritten font-pencil">padding: py-5</div>
+
+    <h1 class="text-center pt-3">My Main Project</h1>
+    <section class="slide-soldier-section">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 d-flex align-items-stretch">
+                    <div class="h-card-thumb ss-thumb"></div>
+                    <div class="ss-body text-center">
+                        <p>Slide Soldiers is a <b>new twist on sliding block puzzles</b>! It's not about reaching the goal, just hitting the targets. Once you start moving, there's no stopping till you hit a wall.</p>
+                        <p>Or try <b>Adventure Mode</b> where you must remember where you've been or you might get lost. Navigation becomes more about remembering where you've been!</p>
+                        <a href="#"><button class="btn btn-primary">
+                                Check out the Full Features!
+                                <!-- <i class="fa-solid fa-puzzle-piece"></i> -->
+                            </button></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 ss-screenshots px-5 my-3 d-flex align-items-center">
+
+                    <div id="ss-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="../img/ss-home-screenshot-1.png" alt="slide soldiers screenshot">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="../img/ss-home-screenshot-2.png" alt="slide soldiers screenshot">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="../img/ss-home-screenshot-3.png" alt="slide soldiers screenshot">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="../img/ss-home-screenshot-4.png" alt="slide soldiers screenshot">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="../img/ss-home-screenshot-5.png" alt="slide soldiers screenshot">
+                            </div>
+                        </div>
+                        <div class="ss-bottom-image-soldier"></div>
+                        <div class="ss-bottom-image-slime"></div>
+                    </div>
+
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="container">
-        <div class="row py-4">
-            <div class="col-9 text-center youtube m-auto">
-                <p class="fw-bold h5">Check out the channel!</p>
-                <a href="https://www.youtube.com/c/DistractedCoder"><img src="/img/channel.png" style="max-width: 100%; max-height: 80px; border-radius: 10px;"></a>
+
+    <section class="position-relative project-jumpoff">
+
+        <div class="container px-5 py-5 text-center">
+            <h1>Most Projects Exist Elsewhere</h1>
+            <h5 class="small">but feel free to stick around</h5>
+            <div class="row display-6">
+                <div class="col-12 col-md-6 mb-4 mb-md-0 d-flex align-items-center justify-content-center">
+                    <span class="">Videos to Watch</span>
+                    <i class="fa-solid fa-arrow-right mx-2"></i>
+                    <a href="https://www.youtube.com/@DistractedCoder"><img src="../img/youtube-logo.svg" class=""></a>
+                </div>
+                <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+                    <span class="">Games to Play</span>
+                    <i class="fa-solid fa-arrow-right mx-2"></i>
+                    <a href="https://distractedcoder.itch.io/"><img src="../img/itch-logo.png" class=""></a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="text-center">
-        <h2 style="margin-bottom: 3px;">Here's some of my best videos!</h2>
-            <p>Give one a watch!</p>
-    </div>
+    </section>
 
-    <div class="container">
-        <div class="row">
 
-            <div class="col-sm-4 text-center">
-                <div class="videoCallout my-3">
-                    <div class="thumbnail">
-                        <a href="https://www.youtube.com/watch?v=8dIFFevPCDo">
-                            <img src="/img/pacman-3d-thumbnail.png" class="img-fluid">
-                            <div class="thumbnailTime">9:24</div>
-                        </a>
-                    </div>
-                    <a href="https://www.youtube.com/watch?v=8dIFFevPCDo">
-                        <p class="my-2">I Made Pacman but it's in 3D</p>
-                    </a>
-                </div>
+
+
+
+    <h1 class="text-center ">My Favorite Projects</h1>
+    <section class="favorite-videos position-relative">
+        <div class="stain"></div>
+        <div class="container">
+            <div class="row justify-content-center" id="favorite-container">
+
+
+
             </div>
-
-            <div class="col-sm-4 text-center">
-                <div class="videoCallout my-3">
-                    <div class="thumbnail">
-                        <a href="https://youtu.be/fkvc9Qc5ycE">
-                            <img src="/img/mario-ai-thumbnail.png" class="img-fluid">
-                            <div class="thumbnailTime">13:23</div>
-                        </a>
-                    </div>
-                    <a href="https://youtu.be/fkvc9Qc5ycE">
-                        <p class="my-2">Making a Mario AI with Python🐍</p>
-                    </a>
-                </div>
+            <div class="row justify-content-center">
+                <div class="page-notes2 font-handwritten font-pencil col-12 text-center">classes: col-12 col-md-4 justify-content-center</div>
             </div>
-
-            <div class="col-sm-4 text-center">
-                <div class="videoCallout my-3">
-                    <div class="thumbnail">
-                        <a href="https://www.youtube.com/watch?v=8dIFFevPCDo">
-                            <img src="/img/doom-thumbnail.png" class="img-fluid">
-                            <div class="thumbnailTime">8:33</div>
-                        </a>
-                    </div>
-                    <a href="https://www.youtube.com/watch?v=8dIFFevPCDo">
-                        <p class="my-2">The Worst DOOM Port | Browser Checkboxes ☑️</p>
-                    </a>
-                </div>
-            </div>
-
-
         </div>
-    </div>
+    </section>
 
 
-    <div class="text-center">
-        <h2 style="margin-bottom: 3px;margin-top: 15px;">Personal Favorites</h2>
-            <p>Also watch these!</p>
-    </div>
 
-    <div class="container">
-        <div class="row">
+    <script>
+        Get5FavoriteVideos(false);
+    </script>
 
-            <div class="col-sm-4 text-center">
-                <div class="videoCallout my-3">
-                    <div class="thumbnail">
-                        <a href="https://youtu.be/szz-TjNjkYc">
-                            <img src="/img/elden-ring-thumbnail.png" class="img-fluid">
-                            <div class="thumbnailTime">9:59</div>
-                        </a>
+
+
+    <section class="position-relative pt-5">
+        <div class="page-notes3 font-handwritten font-pencil">padding: py-5</div>
+        <h1 class="text-center ">Discontinued Games</h1>
+        <h5 class="small text-center">These were planned as full releases but ultimately abandoned</h5>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="h-card">
+                        <div class="h-card-thumb ooc-thumb"></div>
+                        <div class="h-card-body">
+                            <h4>Out of Control - 2.5 years</h4>
+                            <p>
+                                Ah poor Out of Control. This was my first big project on PC. Because I spent so long on development and not enough time getting feedback, the initial response was <i>...well received</i>.
+                            </p>
+                            <div class="text-center">
+                                <a href="https://distractedcoder.itch.io/out-of-control-demo1" target="_blank"><button class="btn btn-primary">Play the Finished Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
+                            </div>
+                        </div>
                     </div>
-                    <a href="https://youtu.be/szz-TjNjkYc">
-                        <p class="my-2">I Could EASILY Create Elden Ring in 24 Hours!</p>
-                    </a>
                 </div>
-            </div>
 
-            <div class="col-sm-4 text-center">
-                <div class="videoCallout my-3">
-                    <div class="thumbnail">
-                        <a href="https://youtu.be/szqwhKTpzqw">
-                            <img src="/img/fundy-tetris-thumbnail.png" class="img-fluid">
-                            <div class="thumbnailTime">4:21</div>
-                        </a>
+
+                <div class="col-12 col-md-6">
+                    <div class="h-card no-top-border">
+                        <div class="h-card-thumb vv-thumb"></div>
+                        <div class="h-card-body">
+                            <h4>Vicious Vine - 1 year</h4>
+                            <p>
+                                Scope creep killed this one. Too many things were planned and simultaneously rushing/faking features for the trailer.
+                            </p>
+                            <div class="text-center">
+                                <a href="https://distractedcoder.itch.io/vicious-vine" target="_blank"><button class="btn btn-primary">Play the Game Jam Version <i class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
+                            </div>
+                        </div>
                     </div>
-                    <a href="https://youtu.be/szqwhKTpzqw">
-                        <p class="my-2">Tetris but the Pieces are SUS - Fundy Inspired</p>
-                    </a>
                 </div>
+
+
             </div>
-
-            <div class="col-sm-4 text-center">
-                <div class="videoCallout my-3">
-                    <div class="thumbnail">
-                        <a href="https://youtu.be/iMs6wuEkvHE">
-                            <img src="/img/kirby-car-thumbnail.png" class="img-fluid">
-                            <div class="thumbnailTime">8:04</div>
-                        </a>
-                    </div>
-                    <a href="https://youtu.be/iMs6wuEkvHE">
-                        <p class="my-2">Nintendo's MISSED OPPORTUNITY with Karby</p>
-                    </a>
-                </div>
-            </div>
-
-
         </div>
-    </div>
+    </section>
 
 
 
-    <div class="container">
-        <div class="row">
+    <section>
 
-            <div class="col-sm-4 text-center m-auto">
-                <div class="videoCallout my-3">
-                    <div class="thumbnail">
-                        <a href="https://youtu.be/Nr4jPbfoRZM">
-                            <img src="/img/pokemon-go-thumbnail.png" class="img-fluid">
-                            <div class="thumbnailTime">10:58</div>
-                        </a>
-                    </div>
-                    <a href="https://youtu.be/Nr4jPbfoRZM">
-                        <p class="my-2">Pokémon Go like You’ve NEVER Seen | Gameboy Version</p>
-                    </a>
-                </div>
-            </div>
-
-
+        <div class="pencil">
+            <img src="../img/pencil-black.png" alt="A pencil lying on its side">
         </div>
-    </div>
+        <div class="pencil-text font-handwritten font-pencil mb-3">Man, it really took me too long to finish the site</div>
+    </section>
 
-    <div class="footer text-center">
-        <p class="my-1 fs-5">Footer TBD</p>
-        <p style="font-size:12px; border-bottom: 2px solid white;">Hah, I'll get to it</p>
-    </div>
+
+
+    <footer>
+        <div id="footer"></div>
+
+
+        <noscript style="width: 100%;">
+            <div style="font-size: 22px; color: red;">
+                This page requires javascript to run correctly. Parts may be missing or function incorrectly.
+            </div>
+        </noscript>
+    </footer>
+
+
+
+
+
+
+
+
+
+    <section class="px-5">
+        <h1>header LINKS</h1>
+        <ol>
+            <li>slide soldiers link</li>
+            <li>about us link</li>
+        </ol>
+        <h1>footer LINKS</h1>
+        <ol>
+            <li>about us link</li>
+            <li>slide soldiers link</li>
+        </ol>
+        <h1>slide soldier section link</h1>
+        <h1>.</h1>
+        <h1>.</h1>
+        <h1>.</h1>
+        <h1>.</h1>
+
+    </section>
+
 </body>
 
 </html>
