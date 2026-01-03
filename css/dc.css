@@ -151,23 +151,26 @@ body {
     padding-right: calc(var(--spacer) * 5.5);
 }
 
+/* .btn-primary{
+    color: var(--pen-color)
+} */
+
+.btn-secondary{
+    background-color: var(--almost-white);
+    color: var(--pen-color);
+    border: 4px solid var(--blueprint-grid-bg-color);
+}
+
+.btn-secondary:hover{
+    background-color: var(--blueprint-grid-bg-color);
+    color: var(--almost-white);
+    border: 4px solid var(--blueprint-grid-bg-color);
+}
+
 /*==============================================================================================temp*/
-.col-12,
-.hero-avatar,
-.hero-content {
-    border: var(--debug) solid red;
-}
 
-.row,
-.hero-grid {
-    border: var(--debug) solid rgb(4, 0, 255);
-}
 
-.project-jumpoff img {
-    border: var(--debug) solid rgb(0, 255, 0);
-}
-
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
     nav {
         background-color: red
     }
@@ -201,7 +204,7 @@ body {
     nav {
         background-color: rgb(0, 76, 255)
     }
-}
+} */
 
 /*==============================================================================================nav*/
 nav {
@@ -791,6 +794,14 @@ background-image: url("../img/ss-full-bg-opacity-blur.png");
     z-index: 99;
 }
 
+
+@media (max-width: 992px) {
+    .ss-bottom-image-soldier, .ss-bottom-image-slime{
+        height: 125px;
+    }
+}
+
+
 #ss-carousel {
 position: relative;
 }
@@ -1081,7 +1092,6 @@ footer .container {
     max-width: 680px;
     height: 70%;
     width: 90%;
-    zz-index: 99999;
 
     box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.4);
 
