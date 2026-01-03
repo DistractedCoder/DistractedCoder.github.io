@@ -90,34 +90,31 @@ const allVideos = [
     ],
 ]
 
-function Get5FavoriteVideos(showCopyright)
-{
+function Get5FavoriteVideos(showCopyright) {
     let index = Math.floor(Math.random() * allVideos.length);
 
     const loopCount = window.innerWidth < 786 ? 3 : 5; //do only 3 on mobile
 
     for (let i = 0; i < loopCount; i++) {
-      if (allVideos[index][0] == false || showCopyright == true)
-      {
-        GenerateFavoriteCard(
-            allVideos[index][1],
-            allVideos[index][2],
-            allVideos[index][3],
-            allVideos[index][4],
-            allVideos[index][5]);
-        index = (index + 1) % allVideos.length; // wrap back to 0 on overflow
-      }
-      else
-      {
-        i--; // do over
-        index = (index + 1) % allVideos.length; // wrap back to 0 on overflow
-      }
-      
+        if (allVideos[index][0] == false || showCopyright == true) {
+            GenerateFavoriteCard(
+                allVideos[index][1],
+                allVideos[index][2],
+                allVideos[index][3],
+                allVideos[index][4],
+                allVideos[index][5]);
+            index = (index + 1) % allVideos.length; // wrap back to 0 on overflow
+        }
+        else {
+            i--; // do over
+            index = (index + 1) % allVideos.length; // wrap back to 0 on overflow
+        }
+
     }
 }
 
 function GenerateFavoriteCard(link, thumbURL, duration, title, description) {
-  const html = `
+    const html = `
     <div class="col-12 col-md-4 mb-2">
                     <a href="${link}" class="card mx-5 mx-md-2 mx-lg-5" target="_blank">
                         <div class="video-thumbnail">
@@ -133,11 +130,36 @@ function GenerateFavoriteCard(link, thumbURL, duration, title, description) {
                 </div>
   `;
 
-  document.getElementById("favorite-container").insertAdjacentHTML("beforeend", html);
+    document.getElementById("favorite-container").insertAdjacentHTML("beforeend", html);
 }
 
-function GetCopyright(){
-	var d = new Date();
-	var n = d.getFullYear();
-	document.getElementById("footer-copyright").innerHTML = "&copy; Distracted Coder, LLC " + n.toString();
+function GetCopyright() {
+    var d = new Date();
+    var n = d.getFullYear();
+    document.getElementById("footer-copyright").innerHTML = "&copy; Distracted Coder, LLC " + n.toString();
+}
+
+
+
+// part of url, [alt names]
+function AutoRedirect(target, aliases) {
+    var base = "https://distractedcoder.com/";
+    var path = window.location.pathname;
+    var lowerPath = path.toLowerCase().replace(base,"");
+
+    if (lowerPath === target)
+    {
+        window.location.replace(target); //this was a capitalization issue
+        return;
+    }
+
+
+
+    // // aliases must be lowercase
+    // for (var i = 0; i < aliases.length; i++) {
+    //     if (lowerPath === aliases[i]) {
+    //         window.location.replace(target);
+    //     }
+    // }
+
 }

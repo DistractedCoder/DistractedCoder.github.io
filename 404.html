@@ -54,6 +54,42 @@
     </section>
 
 
+
+<script>
+    // (function () {
+    //   var loc = window.location;
+    //   var originalPath = loc.pathname;
+    //   var lowerPath = originalPath.toLowerCase();
+
+    //   // Known aliases (ALWAYS lowercase keys + values)
+    //   var aliases = {
+    //     "/slidesoldiers/": "/slidesoldiers/",
+    //     "/slide_soldiers/": "/slidesoldiers/",
+    //     "/slidesoldier/": "/slidesoldiers/"
+    //   };
+
+    //   // 1) Alias redirect (highest priority)
+    //   if (aliases[lowerPath]) {
+    //     loc.replace(
+    //       aliases[lowerPath] + loc.search + loc.hash
+    //     );
+    //     return;
+    //   }
+
+    //   // 2) Lowercase normalization
+    //   if (originalPath !== lowerPath) {
+    //     loc.replace(
+    //       lowerPath + loc.search + loc.hash
+    //     );
+    //   }
+    // })();
+
+    AutoRedirect("slide-soldiers/", []);
+  </script>
+
+
+
+
 </body>
 
 </html>
