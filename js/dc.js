@@ -154,6 +154,7 @@ function AutoRedirect(target, aliases) {
     var search = loc.search;
     var hash = loc.hash;
 
+    var path = loc.pathname;
     var currentNorm = normalizePath(path);
     var targetNorm = normalizePath(target);
 
