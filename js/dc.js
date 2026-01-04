@@ -160,7 +160,7 @@ function AutoRedirect(target, aliases) {
     // aliases must be lowercase
     for (var i = 0; i < aliases.length; i++) {
         if (lowerPath === aliases[i]) {
-            window.location.replace(base + "/" + target);
+            window.location.replace(target);
         }
     }
 
