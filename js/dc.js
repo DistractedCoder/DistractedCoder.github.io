@@ -173,11 +173,11 @@ function AutoRedirect(target, aliases) {
         }
     }
 
-    // 2) Lowercase-only normalization (no alias)
-    if (currentRaw !== currentNorm) {
-        loc.replace(
-            currentNorm + "?redirected=1" + hash
-        );
-        return;
-    }
+    // // 2) Lowercase-only normalization (no alias)
+    // if (currentRaw !== currentNorm) {
+    //     loc.replace(
+    //         currentNorm + "?redirected=1" + hash
+    //     );
+    //     return;
+    // }
 }
