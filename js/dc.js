@@ -143,32 +143,41 @@ function GetCopyright() {
 
 
 
-    function normalizePath(p) {
-        if (!p.startsWith("/")) p = "/" + p;
-        if (!p.endsWith("/")) p = p + "/";
-        return p.toLowerCase();
-    }
+function normalizePath(p) {
+    if (!p.startsWith("/")) p = "/" + p;
+    if (!p.endsWith("/")) p = p + "/";
+    return p.toLowerCase();
+}
 
-    function AutoRedirect(target, aliases) {
-        var loc = window.location;
+function AutoRedirect(target, aliases) {
+    var loc = window.location;
     var search = loc.search;
     var hash = loc.hash;
-    
-        var current = normalizePath(loc.pathname);
-        var canonical = normalizePath(target);
 
-        if (search.indexOf("redirected=1") !== -1) {
+    var currentRaw = path;
+    var currentNorm = normalizePath(path);
+    var targetNorm = normalizePath(target);
+
+    // Fail-safe: already redirected
+    if (search.indexOf("redirected=1") !== -1) {
+        return;
+    }
+
+    // 1) Alias redirect (exact, normalized)
+    for (var i = 0; i < aliases.length; i++) {
+        if (currentNorm === normalizePath(aliases[i])) {
+            loc.replace(
+                targetNorm + "?redirected=1" + hash
+            );
             return;
         }
-
-        for (var i = 0; i < aliases.length; i++) {
-            if (current === normalizePath(aliases[i])) {
-                loc.replace(canonical + "?redirected=1" + hash);
-                return;
-            }
-        }
-
-        if (current !== canonical) {
-            loc.replace(canonical + "?redirected=1" + hash);
-        }
     }
+
+    // 2) Lowercase-only normalization (no alias)
+    if (currentRaw !== currentNorm) {
+        loc.replace(
+            currentNorm + "?redirected=1" + hash
+        );
+        return;
+    }
+}
