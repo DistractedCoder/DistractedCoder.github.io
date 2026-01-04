@@ -141,33 +141,34 @@ function GetCopyright() {
 
 
 
-// part of url, [alt names]
 function AutoRedirect(target, aliases) {
-    var base = "distractedcoder.com";
-    var path = window.location.pathname;
-    var failsafe = "?redirected";
 
-    if (path.indexOf(failsafe) !== -1) {
-        return; //already redirected once, do not try again
-    }
+        var loc = window.location;var loc = window.location;
+    var path = loc.pathname;
+    var search = loc.search;
+    var hash = loc.hash;
+    
+        var normalizedPath = path.toLowerCase();
 
-    //var lowerPath = path.toLowerCase().replace(base,"").replace("https://","").replace("http://","").replace("www.","").replace("localhost:4000/","");
-    var lowerPath = path.toLowerCase().split("/")[1];
+        // Fail-safe: already redirected
+        if (search.indexOf("redirected=1") !== -1) {
+            return;
+        }
 
-    console.log("AutoRedirect checking path: " + lowerPath + " against target: " + target);
-    if (lowerPath === target)
-    {
-        window.location.assign(base + "/" + target + failsafe); //this was a capitalization issue
-        return;
-    }
+        // Alias match
+        for (var i = 0; i < aliases.length; i++) {
+            if (normalizedPath === aliases[i]) {
+                loc.replace(
+                    target + "?redirected=1" + hash
+                );
+                return;
+            }
+        }
 
-
-
-    // aliases must be lowercase
-    for (var i = 0; i < aliases.length; i++) {
-        if (lowerPath === aliases[i]) {
-            window.location.assign(base + "/" + target + failsafe);
+        // Lowercase normalization
+        if (path !== normalizedPath) {
+            loc.replace(
+                normalizedPath + "?redirected=1" + hash
+            );
         }
     }
-
-}
