@@ -145,13 +145,19 @@ function GetCopyright() {
 function AutoRedirect(target, aliases) {
     var base = "distractedcoder.com";
     var path = window.location.pathname;
+    var failsafe = "?redirected";
+
+    if (path.includes(failsafe)) {
+        return; //already redirected once, do not try again
+    }
+
     //var lowerPath = path.toLowerCase().replace(base,"").replace("https://","").replace("http://","").replace("www.","").replace("localhost:4000/","");
     var lowerPath = path.toLowerCase().split("/")[1];
 
     console.log("AutoRedirect checking path: " + lowerPath + " against target: " + target);
     if (lowerPath === target)
     {
-        window.location.replace(target); //this was a capitalization issue
+        window.location.assign(base + "/" + target + failsafe); //this was a capitalization issue
         return;
     }
 
@@ -160,7 +166,7 @@ function AutoRedirect(target, aliases) {
     // aliases must be lowercase
     for (var i = 0; i < aliases.length; i++) {
         if (lowerPath === aliases[i]) {
-            window.location.replace(target);
+            window.location.assign(base + "/" + target + failsafe);
         }
     }
 
