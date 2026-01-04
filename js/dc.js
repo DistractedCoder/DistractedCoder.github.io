@@ -141,34 +141,34 @@ function GetCopyright() {
 
 
 
-function AutoRedirect(target, aliases) {
 
-        var loc = window.location;var loc = window.location;
-    var path = loc.pathname;
+
+    function normalizePath(p) {
+        if (!p.startsWith("/")) p = "/" + p;
+        if (!p.endsWith("/")) p = p + "/";
+        return p.toLowerCase();
+    }
+
+    function AutoRedirect(target, aliases) {
+        var loc = window.location;
     var search = loc.search;
     var hash = loc.hash;
     
-        var normalizedPath = path.toLowerCase();
+        var current = normalizePath(loc.pathname);
+        var canonical = normalizePath(target);
 
-        // Fail-safe: already redirected
         if (search.indexOf("redirected=1") !== -1) {
             return;
         }
 
-        // Alias match
         for (var i = 0; i < aliases.length; i++) {
-            if (normalizedPath === aliases[i]) {
-                loc.replace(
-                    target + "?redirected=1" + hash
-                );
+            if (current === normalizePath(aliases[i])) {
+                loc.replace(canonical + "?redirected=1" + hash);
                 return;
             }
         }
 
-        // Lowercase normalization
-        if (path !== normalizedPath) {
-            loc.replace(
-                normalizedPath + "?redirected=1" + hash
-            );
+        if (current !== canonical) {
+            loc.replace(canonical + "?redirected=1" + hash);
         }
     }
