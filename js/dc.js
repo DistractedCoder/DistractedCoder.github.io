@@ -147,7 +147,7 @@ function AutoRedirect(target, aliases) {
     var path = window.location.pathname;
     var failsafe = "?redirected";
 
-    if (path.includes(failsafe)) {
+    if (path.indexOf(failsafe) !== -1) {
         return; //already redirected once, do not try again
     }
 
