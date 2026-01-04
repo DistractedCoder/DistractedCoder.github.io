@@ -143,10 +143,12 @@ function GetCopyright() {
 
 // part of url, [alt names]
 function AutoRedirect(target, aliases) {
-    var base = "https://distractedcoder.com/";
+    var base = "distractedcoder.com";
     var path = window.location.pathname;
-    var lowerPath = path.toLowerCase().replace(base,"");
+    //var lowerPath = path.toLowerCase().replace(base,"").replace("https://","").replace("http://","").replace("www.","").replace("localhost:4000/","");
+    var lowerPath = path.toLowerCase().split("/")[1];
 
+    console.log("AutoRedirect checking path: " + lowerPath + " against target: " + target);
     if (lowerPath === target)
     {
         window.location.replace(target); //this was a capitalization issue
@@ -155,11 +157,11 @@ function AutoRedirect(target, aliases) {
 
 
 
-    // // aliases must be lowercase
-    // for (var i = 0; i < aliases.length; i++) {
-    //     if (lowerPath === aliases[i]) {
-    //         window.location.replace(target);
-    //     }
-    // }
+    // aliases must be lowercase
+    for (var i = 0; i < aliases.length; i++) {
+        if (lowerPath === aliases[i]) {
+            window.location.replace(base + "/" + target);
+        }
+    }
 
 }
