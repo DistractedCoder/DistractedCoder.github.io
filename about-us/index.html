@@ -7,7 +7,7 @@ description: "Meet the team behind Distracted Coder."
 <html lang="en">
 
 <head>
-    
+
     {% include head.html %}
 
 </head>
@@ -21,12 +21,79 @@ description: "Meet the team behind Distracted Coder."
 
 
 
-    
-    <h1>About us</h1>
-    coming soon
+    <section class="container mt-4 generic-plain-card">
+        <h1 class="text-center mt-3">About Us</h1>
+        <div class="row">
+            <div class="col-12 col-md-3 about-us-avatar"></div>
+            <div class="col-12 col-md-9 mb-4">
+                <h2>Who We Are</h2>
+                <p>Distracted Coder is a solo independent game studio.</p>
+                <p>I'm Alex, the founder and developer behind the studio. I handle the game design, programming, and creative direction for every project.</p>
 
 
-  
+
+                <h2>How it Started</h2>
+                <p>I have been coding and making games since I was in 6th grade. Whoa, it's been <u><span id="years-coding">15</span></u> years now!</p>
+                <p>I released my first iOS game at 19, which went on to surpass a few thousand downloads. After releasing 2 more apps and spending five years creating content on YouTube, I set my sights on something bigger: a Steam game, and maybe someday consoles.</p>
+            </div>
+        </div>
+        <script>
+            document.getElementById("years-coding").innerText = new Date().getFullYear() - 2008;
+        </script>
+    </section>
+
+
+    <div class="no-grid-with-fade">
+        <section class="container">
+            <h2 class="mt-2">Credits & Collaboration</h2>
+            <p>While Distracted Coder is structurally a solo operation, I've been working with some very talented people to make it all happen.</p>
+            <div class="row text-center">
+                <div class="col-6 col-md-3 mb-md-4 generic">
+                    <img src="../img/collaborators/dachi.jpg" alt="Dachi" class="collaborator-photo mb-2">
+                    <div class="collaborator-name">Dachi <a href="https://www.instagram.com/dachi.art/" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
+                    <div class="collaborator-role">Avatar/Jester Artist</div>
+                </div>
+                <div class="col-6 col-md-3  mb-md-4">
+                    <img src="../img/collaborators/bizeedee.jpg" alt="Bizeedee" class="collaborator-photo mb-2">
+                    <div class="collaborator-name">Bizeedee <a href="https://www.fiverr.com/bizeedee" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2.5 -2 24 24" preserveAspectRatio="xMinYMin" class="custom-fa-icon">{% include fiver-icon-path-data.html %}</svg>
+                        </a></div>
+                    <div class="collaborator-role">Video Editor</div>
+                </div>
+                <div class="col-6 col-md-3 mb-md-4">
+                    <img src="../img/collaborators/jules.jpg" alt="Jules" class="collaborator-photo mb-2">
+                    <div class="collaborator-name">Julesdrawz <a href="https://x.com/Julesdrawz" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></div>
+                    <div class="collaborator-role">Slide Soldiers Artist</div>
+                </div>
+                <div class="col-6 col-md-3 mb-md-4">
+                    <img src="../img/collaborators/isaias.png" alt="Isaias" class="collaborator-photo mb-2">
+                    <div class="collaborator-name">Isaias Requena <a href="https://www.fiverr.com/isaiasrequena" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2.5 -2 24 24" preserveAspectRatio="xMinYMin" class="custom-fa-icon">{% include fiver-icon-path-data.html %}</svg>
+                        </a></div>
+                    <div class="collaborator-role">Slide Soldiers Artist</div>
+                </div>
+                <div class="col-6 col-md-3 mb-md-4">
+                    <img src="../img/collaborators/scotty.jpg" alt="Scotty" class="collaborator-photo mb-2">
+                    <div class="collaborator-name">Scotty Rich<a href="https://x.com/ScootyIN2D" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></div>
+                    <div class="collaborator-role">Slide Soldier Composer</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- <section class="container font-handwritten text-center">
+        <p>I'm remarkably stubborn, hate giving up, and easily distracted. In short, I'll always finish what I set my mind to, but I can't guarantee there won't be a few detours along the way. </p>
+    </section> -->
+
+    <figure class="container figure-quote">
+        <blockquote class="blockquote font-handwritten">
+            <p>I'm remarkably stubborn, I hate giving up, and I'm easily distracted. In short, I'll always finish what I set my mind to, but I can't guarantee there won't be a few detours along the way. </p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+            Me, Of course
+        </figcaption>
+    </figure>
 
 
 

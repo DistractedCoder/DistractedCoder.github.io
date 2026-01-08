@@ -7,6 +7,8 @@
     --blueprint-grid-thickness: 2px;
     --blueprint-grid-color: #4c99d3;
 
+    --border-color-blue: var(--blueprint-grid-bg-color);
+
     --almost-white: #f5faff;
 
     --page-grid-size: calc(var(--blueprint-grid-size) / 2);
@@ -158,13 +160,13 @@ body {
 .btn-secondary{
     background-color: var(--almost-white);
     color: var(--pen-color);
-    border: 4px solid var(--blueprint-grid-bg-color);
+    border: 4px solid var(--border-color-blue);
 }
 
 .btn-secondary:hover{
-    background-color: var(--blueprint-grid-bg-color);
+    background-color: var(--border-color-blue);
     color: var(--almost-white);
-    border: 4px solid var(--blueprint-grid-bg-color);
+    border: 4px solid var(--border-color-blue);
 }
 
 /*==============================================================================================temp*/
@@ -708,7 +710,7 @@ nav {
     position: relative;
     width: 100%;
     background-color: var(--page-grid-bg-color);
-    border: 4px solid var(--blueprint-grid-bg-color);
+    border: 4px solid var(--border-color-blue);
     border-left: 0;
     border-right: 0;
     margin-bottom: calc(var(--spacer) * 4.5);
@@ -811,8 +813,8 @@ position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-left: 4px solid var(--blueprint-grid-bg-color);
-  border-right: 4px solid var(--blueprint-grid-bg-color);
+  border-left: 4px solid var(--border-color-blue);
+  border-right: 4px solid var(--border-color-blue);
 }
 
 #ss-carousel img {
@@ -826,7 +828,7 @@ position: relative;
 .card {
     border-radius: 10px;
     background-color: var(--page-grid-bg-color);
-    border: 3px solid var(--blueprint-grid-bg-color);
+    border: 3px solid var(--border-color-blue);
 }
 
 .favorite-videos .card {
@@ -990,7 +992,7 @@ position: relative;
     gap: 1rem;
     background-color: var(--page-grid-bg-color);
     color: inherit;
-    border: 3px solid var(--blueprint-grid-bg-color);
+    border: 3px solid var(--border-color-blue);
     padding-right: 15px;
 }
 
@@ -1260,3 +1262,89 @@ white-space: nowrap;
     background-color: var(--pencil-color);
 }
 
+
+
+/*==============================================================================================*/
+.about-us-avatar{
+    background-image: url("../img/avatar-proud-happy-right.png");
+    background-size: contain;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    min-height: 200px;
+}
+
+.collaborator-photo{
+    height: 175px;
+    width: 175px;
+    border-radius: 50%;
+    border: 3px solid var(--border-color-blue);
+}
+
+/*smaller than medium*/
+@media (max-width: 767.98px) {
+    .collaborator-photo{
+    height: 150px;
+    width: 150px;
+}
+}
+
+.collaborator-name{
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.collaborator-role{
+    font-size: 1.25rem;
+    color: var(--pencil-color-noalpha);
+}
+
+.custom-fa-icon {
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  vertical-align: -0.125em;
+  fill: currentColor;
+  display: inline-block;
+}
+
+.generic-plain-card{
+    background-color: var(--page-grid-bg-color);
+    border: 3px solid var(--border-color-blue);
+    border-radius: 10px;
+}
+
+.no-grid-with-fade {
+    background-color: var(--page-grid-bg-color);
+    margin-top: 60px;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.no-grid-with-fade::before {
+    content: "";
+    position: absolute;
+    top: -58px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to bottom, transparent 0%, var(--page-grid-bg-color) 100%);
+    pointer-events: none;
+}
+
+.no-grid-with-fade::after {
+    content: "";
+    position: absolute;
+    bottom: -58px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to top, transparent 0%, var(--page-grid-bg-color) 100%);
+    pointer-events: none;
+}
+
+.figure-quote {
+    border-left: 3px solid var(--border-color-blue);
+    background-color: var(--page-grid-bg-color);
+    padding: 7px 15px;
+}
