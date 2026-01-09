@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+    <link rel="stylesheet" href="game.css">
+
+    <script src="../../p5.min.js?v=1.1"></script>
+    <script src="../../howler.js?v=1.1"></script>
+    <script type="text/javascript" src="manualSprites.js?v=1.1"></script>
+    <script type="text/javascript" src="sprites.js?v=1.1"></script>
+    <script type="text/javascript" src="renderer.js?v=1.1"></script>
+    <script type="text/javascript" src="ui.js?v=1.1"></script>
+    <script type="text/javascript" src="npc.js?v=1.1"></script>
+    <script src="raycast.js?v=1.1"></script>
+
+<style>
+    canvas
+    {
+        width: 400px !important;
+        height: 250px !important;
+        display: none;
+        position: absolute;
+        top: 0;
+    }
+    body
+    {
+        overflow: scroll;
+        position: relative;
+    }
+    /* input
+    {
+        display: none;
+    } */
+</style>
+
+</head>
+
+<body style="background-color: aliceblue">
+
+    <!--<script>
+        window.onload = init;    
+    </script>-->
+
+<div style="text-align: center" id="loadingtext">Game window is loading...</div>
+
+    <table class="center">
+        <tr>
+            <td class="" id="gameWindow">
+            </td>
+        </tr>
+    </table>
+
+    <div style="text-align: center">
+        <br>Arrow keys to move, Space to shoot<br>
+        Reload the page if you lose
+        <br><br><br>
+        Watch the video on Checkbox Doom's creation on the Distracted Coder YouTube channel: <a href="https://www.youtube.com/channel/UC5_psDGsslV1tEt6rPJjG1w"><b>HERE</b></a>
+    </div>
+
+
+</body>
+
+</html>

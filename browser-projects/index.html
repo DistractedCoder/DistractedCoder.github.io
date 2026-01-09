@@ -1,0 +1,265 @@
+---
+title: "TITLE"
+description: "DESCRIPTION"
+---
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    {% include head.html %}
+
+    <style>
+        .preview-image {
+            max-width: 90%;
+            height: auto;
+            border: 3px solid var(--border-color-blue);
+            border-radius: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /*smaller than medium*/
+@media (max-width: 767.98px) {
+    .preview-image {
+            max-width: 70%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+}
+
+        .item-row {
+            background-color: var(--page-grid-bg-color);
+        }
+
+        /* .col-md-4 {
+            border-top: 2px solid var(--border-color-blue);
+            border-bottom: 2px solid var(--border-color-blue);
+        }
+
+        .col-md-8 {
+            border-top: 2px solid var(--border-color-blue);
+            border-bottom: 2px solid var(--border-color-blue);
+        } */
+
+        .preview-description {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .top-bottom-border {
+            border-top: 2px solid var(--border-color-blue);
+            border-bottom: 2px solid var(--border-color-blue);
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body class="page-grid">
+
+    <header>
+        {% include header.html %}
+    </header>
+
+
+    <section class="my-4 text-center">
+        <h1>Browser Projects</h1>
+        <h3>This is a collection of any browser based projects/experiments.</h3>
+        <h2 class="d-block d-md-none red">NOT SUPPORTED ON MOBILE</h2>
+    </section>
+
+    <section class="container mt-5">
+        <h3 class="text-center">Miscellaneous</h3>
+        <div class="row">
+
+            <div class="col-12">
+                <div class="row top-bottom-border item-row">
+                    <div class="col-12 col-md-4"><img src="preview-images/hanoi.png" class="preview-image"></div>
+                    <div class="col-12 col-md-8 preview-description">
+                        <h3>Towers of Hanoi JavaScript</h3>
+                        <p>A small version of the classic Towers of Hanoi puzzle implemented in JavaScript. I built it for extra credit in school.</p>
+                        <a href="hanoi/hanoi.html"><button class="btn btn-primary">Check it out</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="row top-bottom-border item-row">
+                    <div class="col-12 col-md-4"><img src="preview-images/metaballs.png" class="preview-image"></div>
+                    <div class="col-12 col-md-8 preview-description">
+                        <h3>Metaballs</h3>
+                        <p>A metaball experiment like a lava lamp. No user interaction, just let it run.</p>
+                        <a href="metaballs/metaballs.html"><button class="btn btn-primary">Check it out</button></a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="container mt-5">
+        <h3 class="text-center">Checkbox Rendering Engine</h3>
+        <div class="row">
+
+            <div class="col-12">
+                <div class="row top-bottom-border item-row">
+                    <div class="col-12 col-md-4"><img src="preview-images/clock.png" class="preview-image"></div>
+                    <div class="col-12 col-md-8 preview-description">
+                        <h3>Checkbox Digital Clock</h3>
+                        <p>I was bored so I made a digital clock using checkboxes. That's all.</p>
+                        <a href="clock/clock.html"><button class="btn btn-primary">Check it out</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="row top-bottom-border item-row">
+                    <div class="col-12 col-md-4"><img src="preview-images/bouncy-balls.png" class="preview-image"></div>
+                    <div class="col-12 col-md-8 preview-description">
+                        <h3>Checkbox game Part 1:Bouncing Balls</h3>
+                        <p>Taking the idea further, I made an entire checkbox screen. This was the first part of a multi-part project.</p>
+                        <a href="checkbox_game/1-bouncy_balls/game.html"><button class="btn btn-primary">Check it out</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="row top-bottom-border item-row">
+                    <div class="col-12 col-md-4"><img src="preview-images/bouncy-sprites.png" class="preview-image"></div>
+                    <div class="col-12 col-md-8 preview-description">
+                        <h3>Checkbox game Part 2:'Sprite' Support</h3>
+                        <p>If it's going to become a game, it needed sprite support. This was just a test to make sure that was all working.</p>
+                        <a href="checkbox_game/2-sprites/game.html"><button class="btn btn-primary">Check it out</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="row top-bottom-border item-row">
+                    <div class="col-12 col-md-4"><img src="preview-images/final-ui.png" class="preview-image"></div>
+                    <div class="col-12 col-md-8 preview-description">
+                        <h3>Checkbox game Part 3:Final UI</h3>
+                        <p>Checkbox UI. You can import you're own text into it.</p>
+                        <a href="checkbox_game/4-final_UI/game.html"><button class="btn btn-primary">Check it out</button></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12">
+                <div class="row top-bottom-border item-row">
+                    <div class="col-12 col-md-4"><img src="preview-images/snake-game.png" class="preview-image"></div>
+                    <div class="col-12 col-md-8 preview-description">
+                        <h3>Checkbox game Part 4:Snake Game</h3>
+                        <p>Snake was the first official game I made on the checkbox screen. Made logical sense since everything was grid based already.</p>
+                        <a href="checkbox_game/5-Snake/game.html"><button class="btn btn-primary">Check it out</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="row top-bottom-border item-row">
+                    <div class="col-12 col-md-4"><img src="preview-images/renderer.png" class="preview-image"></div>
+                    <div class="col-12 col-md-8 preview-description">
+                        <h3>Checkbox game Part 5:New Rendering System</h3>
+                        <p>The system wasn't very efficient. I was updating everything every frame even if it was already enabled. I updated it to only update the changed checkboxes and that made a massive difference in performance.</p>
+                        <a href="checkbox_game/6-new_render_system/game.html"><button class="btn btn-primary">Check it out</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="row top-bottom-border item-row">
+                    <div class="col-12 col-md-4"><img src="preview-images/3d-cube.png" class="preview-image"></div>
+                    <div class="col-12 col-md-8 preview-description">
+                        <h3>Checkbox game Part 6:3D Objects</h3>
+                        <p>Just for fun I made it render some 3D objects. Lot's of matrix math, bleh.</p>
+                        <a href="checkbox_game/7-3D_cube/game.html"><button class="btn btn-primary">Check it out</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="row top-bottom-border item-row">
+                    <div class="col-12 col-md-4"><img src="preview-images/dithering.png" class="preview-image"></div>
+                    <div class="col-12 col-md-8 preview-description">
+                        <h3>Checkbox game Part 7:Dithering</h3>
+                        <p>The screen only supported 2 colors. That's not much.<br>So I tried to add dithering to simulate a 50% blue color. It sort of worked but the browser cannot stutter for even a second or the thing fails.<br>It might not even work any more.</p>
+                        <a href="checkbox_game/8-dithering/game.html"><button class="btn btn-primary">Check it out</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="row top-bottom-border item-row">
+                    <div class="col-12 col-md-4"><img src="preview-images/analog-clock.png" class="preview-image"></div>
+                    <div class="col-12 col-md-8 preview-description">
+                        <h3>Checkbox game Part 8:Analog Clock</h3>
+                        <p>I already made a digital clock so logically I made an analog one too.</p>
+                        <a href="analog_clock/game.html"><button class="btn btn-primary">Check it out</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="row top-bottom-border item-row">
+                    <div class="col-12 col-md-4"><img src="preview-images/platformer1.png" class="preview-image"></div>
+                    <div class="col-12 col-md-8 preview-description">
+                        <h3>Checkbox game Part 9:Start of a Platformer</h3>
+                        <p>Now I need a better game than snake. I started the basics on a platformer. It has moving and jumping.</p>
+                        <a href="checkbox_game/9-platformer1/game.html"><button class="btn btn-primary">Check it out</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="row top-bottom-border item-row">
+                    <div class="col-12 col-md-4"><img src="preview-images/platformer2.png" class="preview-image"></div>
+                    <div class="col-12 col-md-8 preview-description">
+                        <h3>Checkbox game Part 10:Actually a Platformer</h3>
+                        <p>A full platformer game. It has a player, enemies, and a level.</p>
+                        <a href="checkbox_game/10-best_platformer/game.html"><button class="btn btn-primary">Check it out</button></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="row top-bottom-border item-row" id="checkbox-doom">
+                    <div class="col-12 col-md-4"><img src="preview-images/doom.png" class="preview-image"></div>
+                    <div class="col-12 col-md-8 preview-description">
+                        <h3>Checkbox game Part 11:DOOM</h3>
+                        <p>It's an implementation of the classic DOOM game using the checkbox system. It's not a port but my own interpretation of the game.<br>It's still crazy that this was possible to do at all!<br>Recommend Browser: Chrome / Edge</p>
+                        <a href="checkbox_game/11-doom/game.html"><button class="btn btn-primary">Check it out</button></a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+<br ><br >
+
+
+
+
+
+
+    <footer>
+        {% include footer.html %}
+    </footer>
+
+
+</body>
+
+</html>

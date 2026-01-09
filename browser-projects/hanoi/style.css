@@ -1,0 +1,21 @@
+
+canvas {
+  display: block;
+}
+
+input:hover {
+    cursor: pointer;
+    
+}
+
+input {
+    width: 15px;
+    height: 15px;
+}
+
+.slider {
+    width: 200px;
+    margin-right: 10px;
+    margin-bottom: 20px ;
+    margin-left: 20px ;
+}
