@@ -1,0 +1,42 @@
+---
+title: "Terrible Clock - Sorted"
+description: "This terrible clock is sorted alphanumerically. All letters and numbers are in order."
+---
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    {% include head.html %}
+    <script type="text/javascript" src="sorted-numerically.js"></script>
+
+    <style>
+        .vh-80 {
+            height: 80vh;
+        }
+        .mb-3rem
+        {
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+
+<body class="page-grid-muted">
+
+    <header>
+        {% include header.html %}
+    </header>
+
+    <section class="d-flex flex-column justify-content-center align-items-center vh-80">
+        <div class="row text-center">
+            <h1 class="">Alphanumerically Sorted Clock</h1>
+            <p class="mb-3rem">All numbers and letters are in their correct order.</p>
+        </div>
+        <div class="row">
+            <div id="display" class="display-1 font-monospace text-center"></div>
+        </div>
+    </section>
+</body>
+
+</html>

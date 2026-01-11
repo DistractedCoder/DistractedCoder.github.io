@@ -15,6 +15,7 @@
     --page-grid-bg-color: var(--almost-white);
     --page-grid-thickness: 3px;
     --page-grid-color: #e7e7e7;
+    --page-grid-color-muted: #e4f1f8;
 
     --nav-height: 70px;
     --nav-height-mobile: calc(var(--nav-height)*2);
@@ -44,6 +45,9 @@
 
 }
 
+html, body {
+  min-height: 100vh;
+}
 
 .suez-one-regular {
     font-family: "Suez One", serif;
@@ -61,6 +65,14 @@
     font-family: "Jua", sans-serif;
     font-weight: 400;
     font-style: normal;
+}
+
+.sono-mono-600 {
+  font-family: "Sono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "MONO" 1;
 }
 
 
@@ -89,6 +101,13 @@ body {
 .font-handwritten {
     font-family: "Sue Ellen Francisco", cursive;
     font-size: 1.5rem;
+}
+
+.font-monospace
+{
+    font-family: "Sono", monospace !important;
+    font-optical-sizing: auto;
+    font-variation-settings: "MONO" 1;
 }
 
 .font-pen {
@@ -124,6 +143,21 @@ body {
         repeating-linear-gradient(90deg,
             var(--page-grid-color) 0,
             var(--page-grid-color) var(--page-grid-thickness),
+            transparent var(--page-grid-thickness),
+            transparent var(--page-grid-size)),
+        linear-gradient(var(--page-grid-bg-color), var(--page-grid-bg-color));
+}
+
+.page-grid-muted {
+    background:
+        repeating-linear-gradient(0deg,
+            var(--page-grid-color-muted) 0,
+            var(--page-grid-color-muted) var(--page-grid-thickness),
+            transparent var(--page-grid-thickness),
+            transparent var(--page-grid-size)),
+        repeating-linear-gradient(90deg,
+            var(--page-grid-color-muted) 0,
+            var(--page-grid-color-muted) var(--page-grid-thickness),
             transparent var(--page-grid-thickness),
             transparent var(--page-grid-size)),
         linear-gradient(var(--page-grid-bg-color), var(--page-grid-bg-color));
@@ -435,7 +469,7 @@ nav {
 .hero-avatar {
     align-self: end;
     height: 100%;
-    background-image: url("../img/avatar-happy.png");
+    background-image: url("/img/avatar-happy.png");
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: contain;
@@ -715,7 +749,7 @@ nav {
     border-right: 0;
     margin-bottom: calc(var(--spacer) * 4.5);
     min-height: 328px;
-background-image: url("../img/ss-full-bg-opacity-blur.png");
+background-image: url("/img/ss-full-bg-opacity-blur.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -730,7 +764,7 @@ background-image: url("../img/ss-full-bg-opacity-blur.png");
     width: 140vw;
     height: 100%;
 
-    background-image: url("../img/ss-full-bg-no-characters.png");
+    background-image: url("/img/ss-full-bg-no-characters.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -752,7 +786,7 @@ background-image: url("../img/ss-full-bg-opacity-blur.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("../img/ss-library-capsule.png");
+    background-image: url("/img/ss-library-capsule.png");
 }
 
 .slide-soldier-section .ss-body {
@@ -769,7 +803,7 @@ background-image: url("../img/ss-full-bg-opacity-blur.png");
 .ss-bottom-image-soldier {
     aspect-ratio: calc(590/500);
     height: 175px;
-    background-image: url("../img/soldier-basic-attack.png");
+    background-image: url("/img/soldier-basic-attack.png");
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -784,7 +818,7 @@ background-image: url("../img/ss-full-bg-opacity-blur.png");
 .ss-bottom-image-slime {
     aspect-ratio: 1;
     height: 175px;
-    background-image: url("../img/slime-hurt.png");
+    background-image: url("/img/slime-hurt.png");
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -944,7 +978,7 @@ position: relative;
     top: 40%;
     width: 300px;
     height: 300px;
-    background-image: url("../img/coffee-stain.png");
+    background-image: url("/img/coffee-stain.png");
     background-size: cover;
     opacity: 0.5;
     pointer-events: none;
@@ -1010,11 +1044,11 @@ position: relative;
 }
 
 .ooc-thumb {
-    background-image: url("../img/ooc-thumb-nologo.png");
+    background-image: url("/img/ooc-thumb-nologo.png");
 }
 
 .vv-thumb {
-    background-image: url("../img/vv-thumb-nologo-alt.png");
+    background-image: url("/img/vv-thumb-nologo-alt.png");
 }
 
 
@@ -1266,7 +1300,7 @@ white-space: nowrap;
 
 /*==============================================================================================*/
 .about-us-avatar{
-    background-image: url("../img/avatar-proud-happy-right.png");
+    background-image: url("/img/avatar-proud-happy-right.png");
     background-size: contain;
     background-position: center bottom;
     background-repeat: no-repeat;

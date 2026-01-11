@@ -1,0 +1,42 @@
+---
+title: "Terrible Clock - Seconds"
+description: "This terrible clock shows only today's seconds. Hours and minutes are overrated."
+---
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    {% include head.html %}
+    <script type="text/javascript" src="only-seconds.js"></script>
+
+    <style>
+        .vh-80 {
+            height: 80vh;
+        }
+        .mb-3rem
+        {
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+
+<body class="page-grid-muted">
+
+    <header>
+        {% include header.html %}
+    </header>
+
+    <section class="d-flex flex-column justify-content-center align-items-center vh-80">
+        <div class="row text-center">
+            <h1 class="">Just Seconds</h1>
+            <p class="mb-3rem">Hours and minutes are overrated. This clock shows only today's seconds.</p>
+        </div>
+        <div class="row">
+            <div id="display" class="display-1 font-monospace text-center"></div>
+        </div>
+    </section>
+</body>
+
+</html>
