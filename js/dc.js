@@ -1,3 +1,7 @@
+hideItemsDuringReview = true; // if true, hide ones with copy true
+
+
+
 /*
 containsCopyright
 "#",
@@ -48,14 +52,6 @@ const allVideos = [
         "Can Fish Play Soccer? Well, that depends...",
         "This easily is the dumbest thing I've ever created. I bought fish, tracked their positions in the tank, and added a virtual soccer ball to kick around. <i>It was so absurd.</i>"
     ],
-    // [
-    //     true,
-    //     "https://youtu.be/KnKKsqVdL1o",
-    //     "../img/thumbnails/mario-kart-50.png",
-    //     "5:28",
-    //     "Why Stop at 24? I Made Mario Kart with 50 PLAYERS!",
-    //     "DESCRIPTION"
-    // ],
     [
         false,
         "https://youtu.be/Wrmlrw-Xlw0",
@@ -90,13 +86,14 @@ const allVideos = [
     ],
 ]
 
-function Get5FavoriteVideos(showCopyright) {
+function Get5FavoriteVideos() {
     let index = Math.floor(Math.random() * allVideos.length);
 
     const loopCount = window.innerWidth < 786 ? 3 : 5; //do only 3 on mobile
 
     for (let i = 0; i < loopCount; i++) {
-        if (allVideos[index][0] == false || showCopyright == true) {
+        if (hideItemsDuringReview == false || //false -> anything allowed
+            (hideItemsDuringReview == true && allVideos[index][0] == false)) {  //true but copy is false
             GenerateFavoriteCard(
                 allVideos[index][1],
                 allVideos[index][2],
@@ -180,4 +177,204 @@ function AutoRedirect(target, aliases) {
     //     );
     //     return;
     // }
+}
+
+
+const allProjects = [
+    ["Slide Soldiers - Playtest Demo",["Puzzle"],"https://distractedcoder.itch.io/slide-soldiers-demo1", "Slide_Soldiers_-_Playtest_Demo.png", false],
+    ["The Final Seed - Jamsepticeye 2025",["Puzzle","Game Jam"],"https://distractedcoder.itch.io/the-final-seed", "The_Final_Seed_-_Jamsepticeye_Entry_2025.png", false],
+    ["Luigi Mansion Gameboy Demake",["Action","Game Jam","Game Boy"],"https://distractedcoder.itch.io/luigi-mansion-gameboy-demake", "Luigi_Mansion_Gameboy_Demake_-_GB_Compo_25.png", true],
+    ["Mario Kart with 50 Players",["Racing"],"https://distractedcoder.itch.io/mario-kart-with-50-players", "Mario_Kart_with_50_Players.png", true],
+    ["Squishy Kirby in Dreamland",["Platformer","Physics"],"https://distractedcoder.itch.io/squishy-kirby", "Squishy_Kirby.png", true],
+    ["Link but He's a Ball",["Adventure","Physics"],"https://distractedcoder.itch.io/link-but-hes-a-ball", "Link_but_He_s_a_Ball_-_Zelda_1.png", true],
+    ["HYPERSPACE Shooter",["Action"],"https://distractedcoder.itch.io/hyperspace", "HYPERSPACE_Shooter.png", false],
+    ["My Own Jackbox Game: Trivia Racetrack",["Party"],"https://distractedcoder.itch.io/custom-jackbox-game-trivia-racetrack", "My_Own_Jackbox_Game_Trivia_Racetrack.png", false],
+    ["Sonic the Hedgehog Board Game",["Card Game"],"https://distractedcoder.itch.io/sonic-the-hedgehog-board-game", "Sonic_the_Hedgehog_Board_Game.png", false],
+    ["Sonic the Hedgehog in 3D",["Platformer"],"https://distractedcoder.itch.io/sonic-the-hedgehog-in-3d", "Sonic_the_Hedgehog_in_3D.png", false],
+    ["Super Mario 2 Strategy RPG",["Strategy"],"https://distractedcoder.itch.io/super-mario-warts-revenge", "Mario_Minus_Rabbids_-_Super_Mario_2.png", true],
+    ["Reverse Pac-Man",["Puzzle"],"https://distractedcoder.itch.io/reverse-pac-man", "Reverse_Pac-Man.png", false],
+    ["Elden Ring in 24 Hours",["Action"],"https://distractedcoder.itch.io/elden-ring-in-24-hours", "Elden_Ring_in_24_Hours.png", false],
+    ["Fundy's Among Us Tetris",["Puzzle"],"https://distractedcoder.itch.io/fundys-among-us-tetris", "Fundy_s_Among_Us_Tetris.png", false],
+    ["Literally Just Car Kirby",["Action"],"https://distractedcoder.itch.io/literally-just-car-kirby", "Literally_Just_Car_Kirby.png", true],
+    ["Pokemon Go Game Boy",["Puzzle","Game Boy"],"https://distractedcoder.itch.io/pokemon-go-game-boy", "Pokemon_Go_Game_Boy.png", false],
+    ["Stranded on Fox Island",["Survival","Game Jam"],"https://distractedcoder.itch.io/stranded-on-fox-island", "Stranded_on_Fox_Island.png", false],
+    ["Remote Control Shuriken",["Action","Game Jam","Game Boy"],"https://distractedcoder.itch.io/rc-shuriken", "Remote_Control_Shuriken_-_GBCompo21.png", false],
+    ["Out of Control Game Boy",["Platformer","Game Boy"],"https://distractedcoder.itch.io/out-of-control-game-boy-color", "Out_of_Control_-_Game_Boy_Color.png", false],
+    ["The Glass Mason - Lego Ideas",["Platformer","Physics","Game Jam"],"https://distractedcoder.itch.io/the-glass-mason", "The_Glass_Mason_-_Lego_Ideas.png", false],
+    ["Doom Browser Checkbox Version",["Shooter"],"/browser-projects/#checkbox-doom", "checkbox_doom.png", false],
+    ["Vicious Vine - Miz Jam 1",["Adventure","Physics","Game Jam"],"https://distractedcoder.itch.io/vicious-vine", "Vicious_Vine_-_Miz_Jam_1.png", false],
+    ["Second Hand Shooter",["Shooter","Game Jam"],"https://distractedcoder.itch.io/second-hand-shooter", "Second_Hand_Shooter_-_GMTK_Game_Jam_2020.png", false],
+    ["Out of Control-Demo 1",["Platformer"],"https://distractedcoder.itch.io/out-of-control-demo1", "Out_of_Control-Demo_1.png", false]];
+
+
+const classSet = new Set();
+var cards;
+
+function FillDashboard()
+{
+    for (var i = 0; i < allProjects.length; i++)
+    {
+        if (i == 0)
+        {
+            document.getElementById("textonly-dashboard").remove();
+        }
+
+        if (hideItemsDuringReview == true && allProjects[i][4] == true)
+        {
+            continue;
+        }
+
+
+        var tags = "";
+        for (var t = 0; t < allProjects[i][1].length; t++)
+        {
+            tags+= `<span class="game-dashboard-tag">${allProjects[i][1][t]}</span>`;
+        }
+
+        var tagclasses = "";
+        for (var t = 0; t < allProjects[i][1].length; t++)
+        {
+            tagclasses+= allProjects[i][1][t].replace(" ","-") + " ";
+            classSet.add(allProjects[i][1][t].replace(" ","-"));
+        }
+
+        MakeDashboardCard(allProjects[i][2], "/img/games-dashboard/" + allProjects[i][3], allProjects[i][0],tags, tagclasses);
+    }
+
+    const sorted = [...classSet].sort((a, b) => a.localeCompare(b));
+    for (const name of sorted) 
+    {
+        addToggleButton(name);
+    }
+
+    cards = document.querySelectorAll(".dashboard-item");
+}
+
+function MakeDashboardCard(link, thumbURL, title, tags, classes) 
+{
+    const html = `<div class="col-12 col-md-4 mb-2 dashboard-item ${classes}">
+                    <a href="${link}" class="card mx-5 mx-md-2 mx-lg-5 game-dashboard-card my-2" target="_blank">
+                        <div class="game-dashboard-thumbnail">
+                            <img src="${thumbURL}">
+                        </div>
+                        <div class="game-dashboard-description">
+                            <h5>${title}</h5>
+                            <p class="my-0">
+                                ${tags}
+                            </p>
+                        </div>
+                    </a>
+                </div>
+  `;
+
+    document.getElementById("dc-dashboard").insertAdjacentHTML("beforeend", html);
+}
+
+
+
+
+// const styleMap = {};
+
+// function addToggleButton(name) {
+//   const button = document.createElement("button");
+//   button.classList.add(name);
+//   button.textContent = name.replace("-"," ");
+//   button.onclick = () => {
+//     // toggle page visibility
+//     toggleClassVisibility(name);
+
+//     // toggle button active state
+//     button.classList.toggle("inactive-button");
+//   };
+//   document.getElementById("controls").appendChild(button);
+// }
+
+// function toggleClassVisibility(className) {
+//   if (styleMap[className]) {
+//     styleMap[className].remove();
+//     delete styleMap[className];
+//   } else {
+//     const style = document.createElement("style");
+//     style.textContent = `.${className} { display: none; }`;
+//     document.head.appendChild(style);
+//     styleMap[className] = style;
+//   }
+// }
+
+
+
+
+// Set of tags that are currently active
+const activeTags = new Set();
+
+// Cache all cards
+
+
+// Add toggle button
+function addToggleButton(name) {
+    
+  //if (classSet.has(name)) return;
+  classSet.add(name);
+
+  const button = document.createElement("button");
+  button.textContent = name.replace("-"," ");
+  button.classList.add(name);
+
+  button.onclick = () => {
+    if (activeTags.has(name)) {
+      activeTags.delete(name);
+      button.classList.remove("inactive-button");
+    } else {
+      activeTags.add(name);
+      button.classList.add("inactive-button");
+    }
+
+    updateCardVisibility();
+  };
+
+  document.getElementById("controls").appendChild(button);
+}
+
+// Show/hide cards based on activeTags
+function updateCardVisibility() {
+    var count = 0;
+  cards.forEach(card => {
+    // Only consider tag classes, ignore structural classes like 'card'
+    const cardTags = Array.from(card.classList).filter(c => classSet.has(c));
+
+    let hide; 
+
+    if (cardTags.length === 0) {
+      // No tags -> never hide
+      hide = false;
+      count++;
+    } else {
+      // Hide if all tag classes are active
+      hide = true; // assume hide
+      for (const tag of cardTags) {
+        if (!activeTags.has(tag)) {
+          hide = false; // found a tag that's not active -> show card
+          count++;
+          break;
+        }
+      }
+    }
+
+    card.style.display = hide ? "none" : "";
+  });
+
+
+const id = "count-indicator";
+
+let div = document.getElementById(id);
+
+if (!div) {
+  div = document.createElement("div");
+  div.id = id;
+  div.classList.add("d-block", "dashboard-count");
+  controls.appendChild(div);
+}
+
+// always update content
+div.textContent = "(" + count.toString() + " games)";
 }

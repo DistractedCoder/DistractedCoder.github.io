@@ -386,7 +386,8 @@ nav {
 .nav-right a:nth-child(5n + 1):hover .nav-bg,
 .footer-section li:nth-child(5n+1) a:hover,
 .social-grid .footer-social-icon:nth-child(5n + 1):hover,
-#favorite-container .col-12:nth-child(5n + 1) .card {
+#favorite-container .col-12:nth-child(5n + 1) .card,
+#dc-dashboard  .col-12:nth-child(5n + 1) .card {
   --cycle-color: var(--solid-orange-color);
   --cycle-bg-color: var(--bg-orange-color);
   --cycle-bg-color-noalpha: var(--bg-orange-color-noalpha);
@@ -397,7 +398,8 @@ nav {
 .nav-right a:nth-child(5n + 2):hover .nav-bg,
 .footer-section li:nth-child(5n+2) a:hover,
 .social-grid .footer-social-icon:nth-child(5n + 2):hover,
-#favorite-container .col-12:nth-child(5n + 2) .card  {
+#favorite-container .col-12:nth-child(5n + 2) .card,
+#dc-dashboard  .col-12:nth-child(5n + 2) .card   {
   --cycle-color: var(--solid-green-color);
   --cycle-bg-color: var(--bg-green-color);
   --cycle-bg-color-noalpha: var(--bg-green-color-noalpha);
@@ -408,7 +410,8 @@ nav {
 .nav-right a:nth-child(5n + 3):hover .nav-bg,
 .footer-section li:nth-child(5n+3) a:hover,
 .social-grid .footer-social-icon:nth-child(5n + 3):hover,
-#favorite-container .col-12:nth-child(5n + 3) .card {
+#favorite-container .col-12:nth-child(5n + 3) .card,
+#dc-dashboard  .col-12:nth-child(5n + 3) .card  {
   --cycle-color: var(--solid-red-color);
     --cycle-bg-color: var(--bg-red-color);
     --cycle-bg-color-noalpha: var(--bg-red-color-noalpha);
@@ -419,7 +422,8 @@ nav {
 .nav-right a:nth-child(5n + 4):hover .nav-bg,
 .footer-section li:nth-child(5n+4) a:hover,
 .social-grid .footer-social-icon:nth-child(5n + 4):hover,
-#favorite-container .col-12:nth-child(5n + 4) .card {
+#favorite-container .col-12:nth-child(5n + 4) .card,
+#dc-dashboard  .col-12:nth-child(5n + 4) .card  {
   --cycle-color: var(--solid-blue-color);
     --cycle-bg-color: var(--bg-blue-color);
     --cycle-bg-color-noalpha: var(--bg-blue-color-noalpha);
@@ -430,7 +434,8 @@ nav {
 .nav-right a:nth-child(5n + 5):hover .nav-bg,
 .footer-section li:nth-child(5n+5) a:hover,
 .social-grid .footer-social-icon:nth-child(5n + 5):hover,
-#favorite-container .col-12:nth-child(5n + 5) .card {
+#favorite-container .col-12:nth-child(5n + 5) .card,
+#dc-dashboard  .col-12:nth-child(5n + 5) .card  {
   --cycle-color: var(--solid-purple-color);
     --cycle-bg-color: var(--bg-purple-color);
     --cycle-bg-color-noalpha: var(--bg-purple-color-noalpha);
@@ -900,6 +905,7 @@ position: relative;
 }
 
 .card:hover {
+    /* this is for all card. home page favorites and game dashboard */
     box-shadow: 0 4px 8px var(--cycle-color);
 
 }
@@ -1381,4 +1387,63 @@ white-space: nowrap;
     border-left: 3px solid var(--border-color-blue);
     background-color: var(--page-grid-bg-color);
     padding: 7px 15px;
+}
+
+
+
+/*================================================================== games dashboard */
+
+.card .game-dashboard-thumbnail {
+    aspect-ratio: 315 / 250;
+    width: 100%;
+    overflow: hidden;
+    /* clips the zoom */
+    position: relative;
+    background-color: var(--blueprint-grid-bg-color);
+    border-radius: 8px 8px 0 0;
+}
+
+.card .game-dashboard-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transform: scale(1);
+    transition: transform 0.4s;
+}
+
+/* Hover trigger */
+.card:hover .game-dashboard-thumbnail img {
+    transform: scale(1.05);
+}
+
+.game-dashboard-tag
+{
+    padding: 2px;
+    border-radius: 2px;
+    background-color: lightgray;
+    font-size: 0.75rem;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.game-dashboard-card
+{
+    text-decoration: none;
+    color: unset;
+}
+
+.game-dashboard-description
+{
+    padding: 8px;
+}
+
+#dc-dashboard .card {
+    transition: box-shadow 0.3s;
+    border-color: var(--cycle-color);
+}
+
+.dashboard-count {
+    margin-left: 10px;
 }
