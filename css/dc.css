@@ -187,9 +187,84 @@ body {
     padding-right: calc(var(--spacer) * 5.5);
 }
 
-/* .btn-primary{
-    color: var(--pen-color)
-} */
+/* =================================================== buttons */
+
+.btn-fancy-offset {
+  position: relative;
+  padding: 16px;
+  color: var(--almost-white) !important;
+  -webkit-transition: padding 0.3s ease-in-out;
+  transition: padding 0.3s ease-in-out;
+  z-index: 2;
+  text-decoration: none;
+  margin: 6px;
+}
+
+/* this is the background */
+.btn-fancy-offset:before {
+  content: "";
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: var(--border-color-blue);
+  border-bottom: 3px solid var(--almost-white);
+  border-right: 3px solid var(--almost-white);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* this is the border */
+.btn-fancy-offset:after { 
+  content: "";
+  position: absolute;
+  top: -0.25rem;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  border: 3px solid rgb(24, 24, 181);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-fancy-offset:hover {
+  text-decoration: underline;
+}
+
+.btn-fancy-offset:hover:before, .btn-fancy-offset:hover:after {
+  top: 0;
+  left: 0;
+}
+
+.btn-fancy-offset-text{ 
+    z-index: 5;
+    position: relative;
+}
+
+
+.btn-fancy-offset-alt {
+  color: var(--pen-color) !important;
+}
+
+/* this is the background */
+.btn-fancy-offset-alt:before {
+  background-color: #cccccc;
+  border-bottom: 3px solid var(--almost-white);
+  border-right: 3px solid var(--almost-white);
+}
+
+/* this is the border */
+.btn-fancy-offset-alt:after { 
+  border: 3px solid rgb(123, 123, 123);
+}
+
+
+.btn-primary {
+    background-color: var(--border-color-blue);
+}
 
 .btn-secondary{
     background-color: var(--almost-white);
@@ -1447,3 +1522,5 @@ white-space: nowrap;
 .dashboard-count {
     margin-left: 10px;
 }
+
+
