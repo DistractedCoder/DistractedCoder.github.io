@@ -1,0 +1,52 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description }}">
+
+
+<!--https://realfavicongenerator.net/-->
+<link rel="icon" type="image/png" href="/favicons/slide-soldiers/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicons/slide-soldiers/favicon.svg" />
+<link rel="shortcut icon" href="/favicons/slide-soldiers/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/slide-soldiers/apple-touch-icon.png" />
+<link rel="manifest" href="/favicons/slide-soldiers/site.webmanifest" />
+<meta name="description" content="{{ page.description | default: site.description }}">
+
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:description" content="{{ page.description | default: site.description }}">
+<meta property="og:image" content="{{ page.social_image | default: 'https://distractedcoder.com/favicons/social-image.png' }}">
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title | default: site.title }}">
+<meta name="twitter:description" content="{{ page.description | default: site.description }}">
+<meta property="twitter:image" content="{{ page.social_image | default: 'https://distractedcoder.com/favicons/social-image.png' }}">
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
+
+<script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    
+
+<script src="https://kit.fontawesome.com/1f28aba095.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/dc.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Germania+One&family=Suez+One&family=Zain:wght@400;800&display=swap" rel="stylesheet">
+
+
+<link href="/slide-soldiers/assets/css/slide-soldiers.css" rel="stylesheet">
+<link href="/slide-soldiers/assets/css/responsive.css" rel="stylesheet">
+
+
+<!-- THIS MUST BE {LAST AND DEFERRED} SO THAT IT RUNS AFTER DOM FINISHES -->
+    <script src="/slide-soldiers/assets/js/main.js" defer></script>

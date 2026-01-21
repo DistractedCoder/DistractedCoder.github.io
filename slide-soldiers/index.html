@@ -1,109 +1,346 @@
 ---
-title: "Slide Soldiers"
-description: "Slide Soldiers is a new twist on sliding block puzzles coming to Steam Q2 2026"
-social_image: https://distractedcoder.com/favicons/social-image-slide-soldiers.png
+title: "Slide Soldiers Home"
+description: "Slide Soldiers is a new twist on sliding block puzzles! It’s not about reaching the goal, just hitting the targets. Releasing to Steam Q3 2026!"
+social_image: https://distractedcoder.com/favicons/slide-soldiers/social-image-slide-soldiers.png
 ---
 
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- this page will have it's own copied head I guess -->
-    {% include head.html %}
-
+    {% include slide-soldiers/ss-head.html %}
 </head>
 
-<body class="page-grid">
-
-    <header>
-        {% include header.html %}
-    </header>
+<body>
+    
+    {% include slide-soldiers/ss-header.html %}
 
 
 
-
-
-    <div class="page-notes1 font-handwritten font-pencil">padding: py-5</div>
-
-    <h1 class="text-center pt-3">This page is coming soon</h1>
-    <section class="slide-soldier-section">
-
+    <!--Content Start-->
+    <div class="jarallax hero">
+        <img class="jarallax-img" src="/slide-soldiers/assets/images/hero-bg.jpg" alt="">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6 d-flex align-items-stretch">
-                    <div class="h-card-thumb ss-thumb"></div>
-                    <div class="ss-body">
-                        <p>Features:</p>
-                        <ul>
-                            <li>
-                                4000 procedurally generated levels
-                            </li>
-                            <li>
-                                Fast sliding action. You only stop when you hit a wall
-                            </li>
-                            <li>
-                                Relaxed gameplay. You can aim for perfection or just enjoy the journey
-                            </li>
-                            <li>
-                                Adventure Mode: The same core mechanics but with a focus on exploration and discovery
-                            </li>
-                            <li>
-                                Relaxing soundtrack
-                            </li>
-                            <li>
-                                Chill hand-drawn art style
-                            </li>
-                        </ul>
-                        <a href="https://distractedcoder.itch.io/slide-soldiers-demo1"><button class="btn btn-secondary">
-                                Try the Demo!
-                                <!-- <i class="fa-solid fa-puzzle-piece"></i> -->
-                            </button></a>
+                <div class="col-md-6 text-center">
+                    <img src="/slide-soldiers/assets/images/logo.png" class="hero-logo">
+                    <p>A soldier on roller skates. A kingdom overrun with monsters. It’s a new twist on sliding block puzzles! It’s not about reaching the goal, just hitting the targets.<br><br>Pick your targets and plan your moves cause there’s no stopping once you start!</p>
+                    <div class="hero-btns">
+                        <a class="btn-default" href="{% include slide-soldiers/ss-link-demo1.html %}" target="_blank">
+                            <span>Try the Demo</span>
+                            <div class="hover-effect">
+                            </div>
+                        </a>
+                        <a class="btn-default btn-default-invert" href="{% include slide-soldiers/ss-link-steam-page.html %}" target="_blank">
+                            <span>Wishlist Now</span>
+                            <div class="hover-effect">
+                            </div>
+                        </a>
                     </div>
-                </div>
-                <div class="col-12 col-md-6 ss-screenshots px-5 my-3 d-flex align-items-center">
-
-                    <div id="ss-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img class="d-block w-100" src="/img/ss-home-screenshot-1.png" alt="slide soldiers screenshot">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="/img/ss-home-screenshot-2.png" alt="slide soldiers screenshot">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="/img/ss-home-screenshot-3.png" alt="slide soldiers screenshot">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="/img/ss-home-screenshot-4.png" alt="slide soldiers screenshot">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="/img/ss-home-screenshot-5.png" alt="slide soldiers screenshot">
-                            </div>
-                        </div>
-                        <div class="ss-bottom-image-soldier"></div>
-                        <div class="ss-bottom-image-slime"></div>
-                    </div>
-
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="container-fluid section-padding features-section text-center">
+        <div class="container z-1">
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <h1 class="mb-0" style="text-transform: none;">Slide Soldiers at a Glance</h1>
+                    <svg width="79" height="6" viewBox="0 0 79 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 0L0 3.2L4 6H38L39.5 3.4L41.5 6H75L78.5 3.2L75 0H41.5L39.5 2.2L38 0H4Z" fill="#0496ee"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="row g-2 g-md-5">
+                <div class="col-12 col-md-6 col-lg-4 px-1">
+                    <div class="creator-item">
+                    
+                        <div class="creator-item__shape creator-item__shape--second">
+                            <img src="/slide-soldiers/assets/images/creator-shape-1-2.svg">
+                        </div>
+                        <div class="creator-item__icon">
+                            <img class="creator-item__icon--img" src="/slide-soldiers/assets/images/icons/icon-levels.png">
+                        </div>
+                        <h3 class="creator-item__title">
+                            4,000 Levels
+                        </h3>
+                        <p class="creator-item__text">Slide through 4,000 pre-generated levels ranging from easy to hard!</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 px-1">
+                    <div class="creator-item">
+                        <div class="creator-item__shape creator-item__shape--second">
+                            <img src="/slide-soldiers/assets/images/creator-shape-1-2.svg">
+                        </div>
+                        <div class="creator-item__icon">
+                            <img class="creator-item__icon--img" src="/slide-soldiers/assets/images/icons/icon-hand-drawn.png">
+                        </div>
+                        <h3 class="creator-item__title">
+                            Fully Hand-drawn
+                        </h3>
+                        <p class="creator-item__text">Fully hand-drawn by real human hands! No AI was used.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 px-1">
+                    <div class="creator-item">
+                        <div class="creator-item__shape creator-item__shape--second">
+                            <img src="/slide-soldiers/assets/images/creator-shape-1-2.svg">
+                        </div>
+                        <div class="creator-item__icon">
+                            <img class="creator-item__icon--img" src="/slide-soldiers/assets/images/icons/icon-puzzle.png">
+                        </div>
+                        <h3 class="creator-item__title">
+                            Find the Path
+                        </h3>
+                        <p class="creator-item__text">Every level has a perfect solution. Will you find it?</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 d-none d-md-inline-block px-1">
+                    <div class="creator-item">
+                        <div class="creator-item__shape creator-item__shape--second">
+                            <img src="/slide-soldiers/assets/images/creator-shape-1-2.svg">
+                        </div>
+                        <div class="creator-item__icon">
+                            <img class="creator-item__icon--img" src="/slide-soldiers/assets/images/icons/icon-grid.png">
+                        </div>
+                        <h3 class="creator-item__title">
+                            Grid Based
+                        </h3>
+                        <p class="creator-item__text">Always see where you are going and always end up where you’d expect.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 d-none d-md-inline-block px-1">
+                    <div class="creator-item">
+                        <div class="creator-item__shape creator-item__shape--second">
+                            <img src="/slide-soldiers/assets/images/creator-shape-1-2.svg">
+                        </div>
+                        <div class="creator-item__icon">
+                            <img class="creator-item__icon--img" src="/slide-soldiers/assets/images/icons/icon-no-timer.png">
+                        </div>
+                        <h3 class="creator-item__title">
+                            Play at your own pace
+                        </h3>
+                        <p class="creator-item__text">No timer and relaxed gameplay keeps things chill.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 px-1">
+                    <div class="creator-item">
+                        <div class="creator-item__shape creator-item__shape--second">
+                            <img src="/slide-soldiers/assets/images/creator-shape-1-2.svg">
+                        </div>
+                        <div class="creator-item__icon">
+                            <img class="creator-item__icon--img" src="/slide-soldiers/assets/images/icons/icon-no-random.png">
+                        </div>
+                        <h3 class="creator-item__title">
+                            No randomness
+                        </h3>
+                        <p class="creator-item__text">Every outcome is fully predictable. If you get lost, that’s on you!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="light-filter bg-filter-1"></div>
+    </div>
+    
+    <div class="container-fluid section-padding screenshots-section text-center" id="screenshots-section" style="z-index: 10;">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-12">
+                    <h2 class="mb-0" style="text-transform: none;">Screenshots and Trailer</h2>
+                    <svg width="79" height="6" viewBox="0 0 79 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 0L0 3.2L4 6H38L39.5 3.4L41.5 6H75L78.5 3.2L75 0H41.5L39.5 2.2L38 0H4Z" fill="#0496ee"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-9 col-xl-8">
+                    <div class="gallery-wrapper">
+                        <!-- MAIN SLIDER -->
+                        <div class="swiper mainSwiper">
+                            <div class="swiper-wrapper">
+                                <!-- TRAILER VIDEO (EMBED) -->
+                                <div class="swiper-slide video-slide">
+                                    <div class="video-wrapper">
+                                        <!-- YouTube / Vimeo / MP4 iframe -->
+                                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/kLPQX-wLp-4?si=3sqoq25S77U-fm-K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <!-- Images -->
+                                <div class="swiper-slide">
+                                    <a data-fancybox="gallery" href="/slide-soldiers/assets/images/screenshots/1.png">
+                                        <img src="/slide-soldiers/assets/images/screenshots/1.png">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-fancybox="gallery" href="/slide-soldiers/assets/images/screenshots/2.png">
+                                        <img src="/slide-soldiers/assets/images/screenshots/2.png">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-fancybox="gallery" href="/slide-soldiers/assets/images/screenshots/3.png">
+                                        <img src="/slide-soldiers/assets/images/screenshots/3.png">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-fancybox="gallery" href="/slide-soldiers/assets/images/screenshots/4.png">
+                                        <img src="/slide-soldiers/assets/images/screenshots/4.png">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a data-fancybox="gallery" href="/slide-soldiers/assets/images/screenshots/5.png">
+                                        <img src="/slide-soldiers/assets/images/screenshots/5.png">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next fa"></div>
+                            <div class="swiper-button-prev fa"></div>
+                        </div>
+                        <!-- THUMBNAILS -->
+                        <div class="swiper thumbSwiper">
+                            <div class="swiper-wrapper">
+                                <!-- Trailer Thumbnail -->
+                                <div class="swiper-slide video-thumb">
+                                    <img src="/slide-soldiers/assets/images/screenshots/trailer-thumb.jpg">
+                                    <span class="play-icon"><i class="fa-solid fa-play"></i></span>
+                                </div>
+                                <div class="swiper-slide swiper-slide-labeled" data-label="1/5"><img src="/slide-soldiers/assets/images/screenshots/1-thumb.png"></div>
+                                <div class="swiper-slide swiper-slide-labeled" data-label="2/5"><img src="/slide-soldiers/assets/images/screenshots/2-thumb.png"></div>
+                                <div class="swiper-slide swiper-slide-labeled" data-label="3/5"><img src="/slide-soldiers/assets/images/screenshots/3-thumb.png"></div>
+                                <div class="swiper-slide swiper-slide-labeled" data-label="4/5"><img src="/slide-soldiers/assets/images/screenshots/4-thumb.png"></div>
+                                <div class="swiper-slide swiper-slide-labeled" data-label="5/5"><img src="/slide-soldiers/assets/images/screenshots/5-thumb.png"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid section-padding bulleted-features-section">
+        <div class="container z-1">
+            <div class="row align-items-center">
+                <div class="col-md-7">
+                    <div class="c-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.41 25.13">{% include slide-soldiers/ss-double-arrow-icon-path-data.html %}</svg>
+                        </div>
+                        <div class="card-content">
+                            <p>Fast sliding movement means commitment. Once you choose a direction, you’ll keep moving until you hit a wall.</p>
+                        </div>
+                    </div>
+                    <div class="c-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.41 25.13">{% include slide-soldiers/ss-double-arrow-icon-path-data.html %}</svg>
+                        </div>
+                        <div class="card-content">
+                            <p>It’s not about reaching the goal or covering all tiles but rather striking the targets. This is not your typical sliding puzzle.</p>
+                        </div>
+                    </div>
+                    <div class="c-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.41 25.13">{% include slide-soldiers/ss-double-arrow-icon-path-data.html %}</svg>
+                        </div>
+                        <div class="card-content">
+                            <p>Adventure Mode limits visibility, asking players to remember their path and follow their trail through dense forests. Levels are built without dead ends, so progress always comes from understanding, not trial and error.</p>
+                        </div>
+                    </div>
+                    <div class="c-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.41 25.13">{% include slide-soldiers/ss-double-arrow-icon-path-data.html %}</svg>
+                        </div>
+                        <div class="card-content">
+                            <p>Hard Mode introduces false enemies placed just out of reach, designed to mislead players who rush their decisions.</p>
+                        </div>
+                    </div>
+                    <div class="c-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.41 25.13">{% include slide-soldiers/ss-double-arrow-icon-path-data.html %}</svg>
+                        </div>
+                        <div class="card-content">
+                            <p>Hand-drawn art makes everything pop, even as puzzles grow more challenging.</p>
+                        </div>
+                    </div>
+                    <div class="c-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.41 25.13">{% include slide-soldiers/ss-double-arrow-icon-path-data.html %}</svg>
+                        </div>
+                        <div class="card-content">
+                            <p>A relaxing soundtrack supports focus without distractions.</p>
+                        </div>
+                    </div>
+                    <div class="c-card">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.41 25.13">{% include slide-soldiers/ss-double-arrow-icon-path-data.html %}</svg>
+                        </div>
+                        <div class="card-content">
+                            <p>Seasonal changes transform the forest, keeping familiar mechanics visually fresh as you play.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5">
+                    <img src="/slide-soldiers/assets/images/enemy4.png" class="enemy4">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid again-demo-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-7 col-xl-6">
+                    <h2 class="mb-1">Releasing July 2026</h2>
+                    <svg width="79" height="6" viewBox="0 0 79 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 0L0 3.2L4 6H38L39.5 3.4L41.5 6H75L78.5 3.2L75 0H41.5L39.5 2.2L38 0H4Z" fill="#0496ee"></path>
+                    </svg>
+                    <p style="font-size: 18px;">A relaxing puzzle adventure is on the way!<br>Add it to your wishlist and enjoy the journey!</p>
+                    <div class="hero-btns">
+                        <a class="btn-default" href="{% include slide-soldiers/ss-link-demo1.html %}" target="_blank">
+                            <span>Try the Demo</span>
+                            <div class="hover-effect">
+                            </div>
+                        </a>
+                        <a class="btn-default btn-default-invert" href="{% include slide-soldiers/ss-link-steam-page.html %}" target="_blank">
+                            <span>Wishlist Now</span>
+                            <div class="hover-effect">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="demo-icons">
+                        <img src="/slide-soldiers/assets/images/logo-steam.png">
+                        <!-- <img src="/slide-soldiers/assets/images/logo-steam.png"> -->
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="again-demo-overlay"></div>
+    </div>
+    <!--Content End-->
+    <section class="z-1 py-3 legal-section">
+        <div class="container">
+        <!-- https://partner.steamgames.com/doc/marketing/branding -->
+        <div class="small text-center">©2026 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.</div>
+        <img src="/slide-soldiers/assets/images/knight.png" width="130px" class="mx-auto d-block d-md-none mt-3">
         </div>
     </section>
 
 
+    <!--Footer Start-->
+    {% include slide-soldiers/ss-footer.html %}
+    <!--Footer End-->
+
+    
 
 
-
-
-
-
-
-
-
-    <footer>
-        {% include footer.html %}
-    </footer>
-
-
+    <script>
+    jarallax(document.querySelectorAll('.jarallax'), {
+        speed: 0.2,
+    });
+    </script>
 </body>
 
 </html>

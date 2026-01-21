@@ -1,0 +1,114 @@
+<!-- Header Start-->
+    <header class="container-fluid header">
+        <div class="container">
+            <div class="inner-header">
+                <div class="left-header">
+                    <div class="header-logos">
+                        <a class="header-logo dc-header-logo" href="/">
+                            <img src="/img/dc-logo-white.png" alt="Distracted Coder" class="logo-image">
+                            <span class="dc-logo-font">Distracted Coder</span>
+                        </a>
+                        <a href="/slide-soldiers/" class="header-logo header-logo-2">
+                            <img src="/slide-soldiers/assets/images/logo.png" class="logo-image" alt="other logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="right-header">
+                    <div class="hamburger-navigation-cover">
+                        <ul class="navigation">
+                            <li>
+                                <a href="{% include slide-soldiers/ss-link-steam-page.html %}" class="btn-default btn-default-invert btn-default-nav" target="_blank">
+                                    <span>Wishlist Now</span>
+                                    <div class="hover-effect">
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/slide-soldiers/#screenshots-section">
+                                    <span>Screenshots</span>
+                                    <div class="mr-hover-effect"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/slide-soldiers/press-kit/">
+                                    <span>Press Kit</span>
+                                    <div class="mr-hover-effect"></div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="desktop-humburger">
+                            <button class="hamburger-btn" id="hamburgerBtn" aria-expanded="false" aria-controls="fullscreenMenu" aria-label="Open menu">
+                                <i class="fa-solid fa-bars"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Header End-->
+
+<!-- hamburger menu -->
+<div class="offCanvas__menu">
+        <div class="offCanvas__menu-header">
+            <a href="/slide-soldiers/" class="offCanvas-logo">
+                <img src="/slide-soldiers/assets/images/logo.png">
+            </a>
+            <div class="close-btn">
+                <img src="/slide-soldiers/assets/images/close-icon.png">
+                <span></span>
+            </div>
+        </div>
+        <div class="offCanvas__content">
+            <ul class="navigation">
+                <li>
+                    <a href="/slide-soldiers/#screenshots-section" onclick="closeMenuAndGo(this)">
+                        <span>Screenshots</span>
+                        <div class="mr-hover-effect"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/slide-soldiers/press-kit/">
+                        <span>Press Kit</span>
+                        <div class="mr-hover-effect"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% include slide-soldiers/ss-link-steam-page.html %}" class="btn-default btn-default-invert btn-default-nav" target="_blank">
+                        <span>Wishlist Now</span>
+                        <div class="hover-effect">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="header-logos text-center my-3 w-100">
+            <a class="header-logo dc-header-logo" href="/">
+                <img src="/img/dc-logo-white.png" alt="Distracted Coder" class="logo-image">
+                <span class="dc-logo-font">Distracted Coder</span>
+            </a>
+        </div>
+
+        <ul class="navigation justify-content-center d-flex flex-column nogap">
+            <li class="">
+                <a href="/">
+                    <span>Home</span>
+                    <div class="mr-hover-effect"></div>
+                </a>
+            </li>
+            <li class="">
+                <a href="/about-us/">
+                    <span>About Us</span>
+                    <div class="mr-hover-effect"></div>
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+    <div class="offCanvas__overlay">
+    </div>
+<!-- hamburger menu end -->
+
+<!-- header padding -->
+<div id="ExtraHeaderPadding"></div>

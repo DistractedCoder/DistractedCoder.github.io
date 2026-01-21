@@ -1,0 +1,146 @@
+@media(min-width:768px) and (max-width:992px) {
+
+    .container,
+    .container-md,
+    .container-sm {
+        max-width: 100%;
+    }
+
+}
+
+
+
+@media(min-width:992px) and (max-width:1200px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm {
+        max-width: 992px;
+    }
+}
+
+
+@media(min-width:1200px) {
+
+    .container,
+    .container-md,
+    .container-sm {
+        max-width: 1140px;
+    }
+}
+
+@media(min-width:1400px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1200px;
+    }
+}
+
+
+@media(max-width:768px) {
+
+    h1,
+    h2 {
+        font-size: 34px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .header-logo-2 {
+        display: none;
+    }
+
+    ul.navigation {
+        display: none;
+    }
+
+    .offCanvas__content ul.navigation {
+        display: flex;
+    }
+
+    .hero-btns {
+        gap: 12px;
+        padding-top: 10px;
+    }
+
+    .creator-item__shape {
+        bottom: 6px;
+    }
+
+    .creator-item__icon {
+        --icon-size: 100px;
+        margin: 0 0 30px 0;
+    }
+
+    .creator-item__icon::before {
+        --icon-size-two: 80px;
+    }
+
+    .btn-default {
+        font-size: 18px;
+        line-height: 18px;
+        padding: 14px 20px 13px;
+    }
+
+    .hero-logo {
+        margin-bottom: 15px;
+    }
+
+    .bulleted-features-section .c-card {
+        gap: 18px;
+    }
+
+    .bulleted-features-section .c-card::before {
+        top: 45px;
+        height: calc(100% - 40px);
+    }
+
+
+
+    .demo-icons {
+        padding-top: 20px;
+        gap: 18px;
+    }
+
+    .demo-icons img {
+        width: 130px;
+    }
+
+
+    .creator-item__icon--img {
+        width: 52px;
+    }
+
+    .thumbSwiper {
+        height: 70px;
+    }
+
+    .mainSwiper {
+        height: 200px;
+    }
+
+    .bulleted-features-section .c-card {
+        margin-bottom: 10px;
+    }
+
+    .jarallax-container img {
+        position: absolute !important;
+        transform: translate3d(0px, 0px, 0px) !important;
+    }
+
+    .bg-filter-1 {
+        background: radial-gradient(circle, #0496ee57 0%, transparent 100%);
+
+    }
+    .fancybox__nav .carousel__button.is-prev,.fancybox__nav  .carousel__button.is-next{
+    top: calc(50% + 20px);
+}
+}
