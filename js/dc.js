@@ -14,10 +14,10 @@ containsCopyright
 const allVideos = [
     [
         true,
-        "https://youtu.be/HYj6JRPdngg",
+        "https://youtu.be/QPQdNZBii2w",
         "../img/thumbnails/mario-srpg.png",
         "11:45",
-        "I Made a Turn-Based Mario Game in 1 Month",
+        "I Turned Mario 2 Into a Turn-Based Strategy Game!",
         "This is by far the <b>best game I have ever created</b>. It had 23 levels and took a few hours to beat. It looked sick and it was fun to play. Mario 2 worked surprisingly well as an RPG. I really enjoyed this one."
     ],
     [
