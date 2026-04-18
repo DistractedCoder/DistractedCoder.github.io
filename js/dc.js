@@ -304,7 +304,7 @@ function MakeDashboardCard(link, thumbURL, title, tags, classes)
 
 
 
-// Set of tags that are currently active
+// Set of tags that are currently active -> i think this is inverted
 const activeTags = new Set();
 
 // Cache all cards
@@ -320,13 +320,23 @@ function addToggleButton(name) {
   button.textContent = name.replace("-"," ");
   button.classList.add(name);
 
-  button.onclick = () => {
-    if (activeTags.has(name)) {
-      activeTags.delete(name);
-      button.classList.remove("inactive-button");
-    } else {
-      activeTags.add(name);
-      button.classList.add("inactive-button");
+  button.onclick = (e) => {
+    if (e.shiftKey)
+    {
+        classSet.forEach(tag => activeTags.add(tag));
+        activeTags.delete(name);
+        $("#controls button").addClass("inactive-button");
+        button.classList.remove("inactive-button");
+    }
+    else
+    {
+        if (activeTags.has(name)) {
+            activeTags.delete(name);
+            button.classList.remove("inactive-button");
+        } else {
+            activeTags.add(name);
+            button.classList.add("inactive-button");
+        }
     }
 
     updateCardVisibility();

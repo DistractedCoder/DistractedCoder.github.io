@@ -528,30 +528,27 @@ ul.navigation li a.navigation-btn span {
 }
 
 
-.btn-default::before {
+.btn-default::before, .btn-default::after {
     content: '';
     width: 15px;
-    height: 51px;
+    height: 100%;
     position: absolute;
-    left: 0px;
-    top: calc(50% - 1px);
-    transform: translatey(-50%);
+    top: calc(50%);
     background-image: url("/slide-soldiers/assets/images/btn-shape-blue.svg");
     background-repeat: no-repeat;
     z-index: 1;
+    background-position: center;
+    background-size: cover;
+}
+
+.btn-default::before {
+    left: 0px;
+    transform: translatey(-50%);
 }
 
 .btn-default::after {
-    content: '';
-    width: 15px;
-    height: 51px;
-    position: absolute;
     right: 0px;
-    top: calc(50% - 1px);
     transform: translatey(-50%) rotate(180deg);
-    background-image: url(/slide-soldiers/assets/images/btn-shape-blue.svg);
-    background-repeat: no-repeat;
-    z-index: 1;
 }
 
 .btn-default.btn-default-invert::before {
