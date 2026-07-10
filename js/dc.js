@@ -1,4 +1,4 @@
-hideItemsDuringReview = true; // if true, hide ones with copy true
+hideItemsDuringReview = false; // if true, hide ones with copy true
 
 
 
