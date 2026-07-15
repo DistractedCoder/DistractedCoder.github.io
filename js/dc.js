@@ -181,6 +181,7 @@ function AutoRedirect(target, aliases) {
 
 
 const allProjects = [
+    ["Tetris, Physics, and Even the Kitchen Sink!",["Puzzle"],"https://distractedcoder.itch.io/tetris-physics-and-even-the-kitchen-sink", "tetris-physics-cover.png", false],
     ["Slide Soldiers - Demo",["Puzzle"],"https://store.steampowered.com/app/3923050/Slide_Soldiers/", "Slide_Soldiers_-_Playtest_Demo.png", false],
     ["The Final Seed - Jamsepticeye 2025",["Puzzle","Game Jam"],"https://distractedcoder.itch.io/the-final-seed", "The_Final_Seed_-_Jamsepticeye_Entry_2025.png", false],
     ["Luigi Mansion Gameboy Demake",["Action","Game Jam","Game Boy"],"https://distractedcoder.itch.io/luigi-mansion-gameboy-demake", "Luigi_Mansion_Gameboy_Demake_-_GB_Compo_25.png", true],
