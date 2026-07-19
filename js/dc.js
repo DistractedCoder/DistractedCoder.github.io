@@ -181,6 +181,7 @@ function AutoRedirect(target, aliases) {
 
 
 const allProjects = [
+    ["It's Hard to be a Color Balance Intern",["Puzzle","Game Jam"],"https://distractedcoder.itch.io/its-hard-to-be-an-art-intern", "kenney-jam-2026.png", false],
     ["Tetris, Physics, and Even the Kitchen Sink!",["Puzzle","Physics"],"https://distractedcoder.itch.io/tetris-physics-and-even-the-kitchen-sink", "tetris-physics-cover.png", false],
     ["Slide Soldiers - Demo",["Puzzle"],"https://store.steampowered.com/app/3923050/Slide_Soldiers/", "Slide_Soldiers_-_Playtest_Demo.png", false],
     ["The Final Seed - Jamsepticeye 2025",["Puzzle","Game Jam"],"https://distractedcoder.itch.io/the-final-seed", "The_Final_Seed_-_Jamsepticeye_Entry_2025.png", false],
