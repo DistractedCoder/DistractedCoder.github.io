@@ -834,6 +834,16 @@ body.offCanvas__menu-visible .offCanvas__overlay {
     transform: rotate(180deg);
 }
 
+.screenshot-section img
+{
+    position: relative;
+}
+
+.screenshot-section img::after{
+    position: absolute;
+    
+}
+
 /*smaller than medium*/
 @media (max-width: 767.98px) {
     .screenshots-section::before, .screenshots-section::after
