@@ -834,15 +834,7 @@ body.offCanvas__menu-visible .offCanvas__overlay {
     transform: rotate(180deg);
 }
 
-.screenshot-section img
-{
-    position: relative;
-}
 
-.screenshot-section img::after{
-    position: absolute;
-    
-}
 
 /*smaller than medium*/
 @media (max-width: 767.98px) {
@@ -1516,4 +1508,28 @@ background-position: right center;
     background-color: var(--golden-1);
     color: white;
     text-decoration: none;
+}
+
+.press-kit-page .screenshot-section a {
+  position: relative;
+  display: inline-block; /* REQUIRED: establishes strict layout bounds for ::after */
+  line-height: 0;       /* Removes space below the image */
+}
+
+.press-kit-page .screenshot-section a img {
+  display: block;       /* Removes inline spacing quirks */
+
+  height: auto;
+}
+
+.press-kit-page .screenshot-section a::after{
+    content: "\f08e"; /* Font Awesome unicode for external-link-alt / square-up-right */
+  font-family: "Font Awesome 6 Free", "Font Awesome 5 Free"; /* Adjust depending on FA version */
+  font-weight: 900; /* Solid icons require font-weight 900 */
+  position: absolute;
+  right: 10px;
+  bottom: 30px;
+  z-index: 1;
+  color: white;
+  pointer-events: none; /* Prevents icon from blocking image clicks */
 }
